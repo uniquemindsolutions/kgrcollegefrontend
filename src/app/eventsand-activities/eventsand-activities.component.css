@@ -1,0 +1,23 @@
+.EventsActivites {
+    h5 {
+      font-size: 20px;
+      span {
+        color: #6a0dad;
+        font-weight: 500;
+      }
+    }
+    .gridItem {
+      border: 3px solid #bc7ceb;
+      padding: 3px;
+      margin-bottom: 20px;
+      height: 130px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        cursor: pointer;
+      }
+    }
+  }
+  

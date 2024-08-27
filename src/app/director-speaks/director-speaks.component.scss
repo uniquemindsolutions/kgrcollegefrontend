@@ -1,0 +1,72 @@
+.bannerImg {
+  img {
+    object-position: top;
+  }
+}
+.chairman_section {
+  // background-color: hsl(216.49deg 81.04% 41.37%);
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.08),
+    0 6px 30px 5px rgba(0, 0, 0, 0.06), 0 8px 10px -7px rgba(0, 0, 0, 0.08);
+  border-radius: 60px;
+  background: #fff;
+  padding: 70px;
+  padding-left: 100px !important;
+  text-align: justify;
+  position: relative;
+  @media (max-width: 991px) {
+    padding: 40px !important;
+  }
+}
+.chairman_section p {
+  margin: 10px;
+  color: #000;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.client {
+  .leftImg {
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    left: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    z-index: 3;
+    img {
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+    @media (max-width: 991px) {
+      display: none;
+    }
+    @media (min-width: 991px) and (max-width: 1200px) {
+      left: 0%;
+    }
+  }
+  .blockquotes {
+    position: absolute;
+    left: -5%;
+    top: -7%;
+    svg {
+      width: 100px;
+      height: 100px;
+    }
+    &.reverse {
+      left: unset;
+      top: unset;
+      right: -5%;
+      bottom: -7%;
+      scale: -1;
+    }
+  }
+  .rightImg {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 40px;
+  }
+}

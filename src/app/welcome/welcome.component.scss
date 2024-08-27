@@ -1,0 +1,85 @@
+.welcome-para h1 {
+  text-align: center;
+}
+.welcome-para p {
+  color: gray;
+}
+.btn-outline-orange {
+  border-color: var(--orang-c);
+  color: var(--orang-c);
+  padding: 10px 20px;
+  font-size: 16px;
+  width: 14vw;
+  border-radius: 25px;
+  text-decoration: none;
+  background-color: transparent;
+}
+.welcome-para,
+.Chairman-section-description {
+  text-align: justify;
+}
+.btn-outline-orange:hover {
+  background-color: var(--orang-c);
+  color: #fff;
+  text-decoration: none;
+}
+
+.chariman-background {
+  // padding: 60px 10px;
+  padding: 20px;
+  background: linear-gradient(90deg, #ffa20d 0, #ffa20d 19%, #efefef 8%);
+}
+
+/* Style for the purple boxes */
+.College-Updates {
+  background-color: #6a0dad;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.College-Updates h3 {
+  margin-top: 0;
+}
+
+.College-Updates p {
+  margin: 0;
+}
+.custom-link {
+  color: white;          
+  text-decoration: underline;
+}
+
+.custom-link:hover {
+  color: #f0f0f0;        
+  text-decoration: underline;
+}
+
+
+.student_faculty {
+  background-color: #6a0dad;
+}
+
+.box-students {
+  background-color: #fff;
+  border-radius: 20px 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 50px 10px;
+  h2 {
+    color: var(--orang-c);
+  }
+}
+@media (max-width: 767px) {
+  .chariman-background {
+    background: #efefef !important;
+  }
+  .base-h1 {
+    font-size: 24px; /* Adjust the font size for smaller screens */
+  }
+
+  .chairman-section-description {
+    font-size: 14px; /* Adjust the font size for smaller screens */
+  }
+}

@@ -1,0 +1,223 @@
+<section class="faculypharmacy">
+  <div class="bannerImg">
+    <img src="../../assets/Images/computerBanner.png" alt="" class="mba_banner_image w-100" />
+  </div>
+  <div class="container">
+    <div class="row align-items-center my-5">
+      <div class="col-md-8 mb-3">
+        <div class="card h-100">
+          <div class="card-header bg-transparent border-success">
+            <h1 class="pp-c my-2">Faculty Resources:</h1>
+            <p>
+              Core faculty members are drawn from an ideal mix of PhDs, M.Phils
+              and NET qualified Masters Degree holders from the respective
+              streams. They are well trained in teaching and have good industry
+              experience and research exposure.
+            </p>
+          </div>
+          <div class="my-3">
+            <div class="">
+              <div class="card-body">
+                <h5 class="card-title base-h3">Dr. G. Vijaya Kumar</h5>
+                <p class="card-text">
+                  Is a Professor & Principal of Pharmacy. He has an work and
+                  research experience of over 28 years in professional teaching
+                  in the Department Pharmacy.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <h5 class="card-title base-h3 text-muted">
+              Professor & Principal in the Department of Pharmacy
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 text-center">
+        <img src="../../assets/Images/gampa.jpg" class="img-fluid rounded-start w-75 h-100" alt="..." />
+      </div>
+    </div>
+
+    <div class="gridItem">
+      <div class="card my-5">
+        <div class="card-header tableHeader">Faculty for Pharmacy Courses</div>
+        <div class="card-body">
+          <div class="table my-2 table-responsive">
+            <table class="table table-bordered">
+              <thead class="table-light">
+                <tr class="table-active">
+                  <th>Sl No:</th>
+                  <th>Name</th>
+                  <th>Designation</th>
+                  <th>Qualification</th>
+                  <th>Experience Teaching</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let facultypharamacy of facutlypharmacydataSource; let i = index">
+                  <td>{{ i + 1 }}</td> <!-- Sl No -->
+                  <td>{{ facultypharamacy.name }}</td> <!-- Name -->
+                  <td>{{ facultypharamacy.designation }}</td> <!-- Designation -->
+                  <td>{{ facultypharamacy.qualification }}</td> <!-- Qualification -->
+                  <td>{{ facultypharamacy.experience_teaching }}</td> <!-- Experience Teaching -->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- <div class="table my-2 table-responsive">
+            <table class="table table-bordered">
+              <thead class="table-light">
+                <tr class="table-active">
+                  <th>Sl No:</th>
+                  <th>Name</th>
+                  <th>Designation</th>
+                  <th>Qualification</th>
+                  <th>Experience Teaching</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Dr. G. Vijaya Kumar</td>
+                  <td>Professor</td>
+                  <td>B.Pharmacy, M.Tech(Biotechnology), P.hd</td>
+                  <td>27 Years</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Dr. V. Anjaneyulu</td>
+                  <td>Associate Professor</td>
+                  <td>M.Pharmacy, Ph.D</td>
+                  <td>15 Years</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Dr. Nagaraj M Kulkarni</td>
+                  <td>Associate Professor</td>
+                  <td>M.Pharmacy, Ph.D</td>
+                  <td>16 Years</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Mrs.P.Sowjanya</td>
+                  <td>Asst. Professor</td>
+                  <td>M.Pharmacy</td>
+                  <td>11 Years</td>
+                </tr>
+
+                <tr>
+                  <td>6</td>
+                  <td>Mrs. B. Sravanthi</td>
+                  <td>Asst. Professor</td>
+                  <td>M.Pharmacy</td>
+                  <td>8 Years</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Mr. Murali Sollu</td>
+                  <td>Asst. Professor</td>
+                  <td>M.Pharmacy</td>
+                  <td>11 Years</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Mr. Y.Purnachander</td>
+                  <td>Asst. Professor</td>
+                  <td>M.Pharmacy</td>
+                  <td>9 Years</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Mr. Venkata Naveen Kumar.K</td>
+                  <td>Asst. Professor</td>
+                  <td>M.Pharmacy</td>
+                  <td>9 Years</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Mrs. Mythili Priyanka</td>
+                  <td>Asst. Professor</td>
+                  <td>M.Pharmacy</td>
+                  <td>6 Years</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>Mrs. P. Sindhuja</td>
+                  <td>Asst. Professor</td>
+                  <td>M.Pharmacy</td>
+                  <td>__ Years</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>Mr. P. Chandra Mohan</td>
+                  <td>Asst. Professor</td>
+                  <td>M.Pharmacy</td>
+                  <td>__ Years</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>Mr. I. Nagaraju</td>
+                  <td>Asst. Professor</td>
+                  <td>M.Pharmacy</td>
+                  <td>__ Years</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td>Dr. T.Rajesh</td>
+                  <td>Associate Professor</td>
+                  <td>M.Pharmacy, Ph.D</td>
+                  <td>12 Years</td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td>Dr. D.Naresh</td>
+                  <td>Associate Professor</td>
+                  <td>M.Pharmacy, Ph.D</td>
+                  <td>13 Years</td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td>Mrs. V. Pavani Devi</td>
+                  <td>Asst. Professor</td>
+                  <td>M.Pharmacy</td>
+                  <td>6 Years</td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>Dr. K. Ramesh</td>
+                  <td>Professor</td>
+                  <td>M.Pharmacy, Ph.D</td>
+                  <td>17 Years</td>
+                </tr>
+                <tr>
+                  <td>19</td>
+                  <td>Dr. G. S. Valluri</td>
+                  <td>Associate Professor</td>
+                  <td>M.Pharmacy, Ph.D</td>
+                  <td>11 Years</td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>Mr. K. Kishore</td>
+                  <td>Asst. Professor</td>
+                  <td>M Pharmacy, (Ph.D)</td>
+                  <td>10 Years</td>
+                </tr>
+                <tr>
+                  <td>21</td>
+                  <td>Dr. Y. Sridhar Yashmania</td>
+                  <td>Professor</td>
+                  <td>M.Pharmacy, Ph.D</td>
+                  <td>23 Years</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

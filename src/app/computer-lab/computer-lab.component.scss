@@ -1,0 +1,115 @@
+.computerLab {
+  // .gridItem {
+  //   h5 {
+  //     color: var(--orang-c) !important    ;
+  //   }
+  //   img {
+  //     object-fit: cover;
+  //     height: 100%;
+  //     min-height: 313px;
+  //     width: 100%;
+  //   }
+  // }
+  // .ImgGrid {
+  //   padding: 10px;
+  //   border: 1px solid #e0dddd;
+  //   border-radius: 5px;
+  //   img {
+  //     max-height: 300px;
+  //     width: 100%;
+  //     object-fit: cover;
+  //     object-position: top;
+  //   }
+  // }
+  .computerSec {
+    position: relative;
+    .leftContent {
+      .gridImg {
+        width: calc(100% - 120px);
+        height: 400px;
+        overflow: hidden;
+        img {
+          min-height: 350px;
+          object-fit: cover;
+        }
+      }
+    }
+    &::before {
+      content: "";
+      background-color: #d396ff91;
+      width: 40%;
+      height: 400px;
+      position: absolute;
+      left: 0;
+      z-index: -1;
+      top: 0;
+    }
+    &::after {
+      content: "";
+      background-color: rgb(228 162 255 / 21%);
+      width: 40%;
+      height: 400px;
+      position: absolute;
+      right: 7%;
+      z-index: -1;
+      bottom: -4rem;
+    }
+    .widOfgrid {
+      width: 120px;
+      background: #6a0dad;
+      position: relative;
+      span {
+        position: absolute;
+        top: 43%;
+        left: 0;
+        font-size: clamp(18px, 1.4583vw, 28px);
+        color: #fff;
+        transform: rotate(90deg) translate(-50%, -50%);
+        text-align: center;
+        z-index: 9;
+        right: 50%;
+        text-transform: uppercase;
+        @media (max-width: 768px) {
+          top: 50%;
+          left: 0;
+          transform: unset;
+          writing-mode: vertical-lr;
+        }
+        @media (max-width: 991px) {
+          top: 35%;
+          width: 33%;
+          // left: 0;
+          // transform: unset;
+          // writing-mode: vertical-lr;
+        }
+        @media (min-width: 992px) and (max-width: 1200px) {
+          top: 20%;
+        }
+      }
+      @media (max-width: 768px) {
+        width: 70px;
+        span {
+          display: none;
+        }
+      }
+      @media (max-width: 991px) {
+        width: 70px;
+      }
+      @media (min-width: 992px) and (max-width: 1200px) {
+        width: 160px;
+      }
+    }
+    h3 {
+      font-size: 25px;
+      margin-bottom: 10px;
+      span {
+        color: #6a0dad;
+        font-weight: 600;
+      }
+    }
+    h4 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+}

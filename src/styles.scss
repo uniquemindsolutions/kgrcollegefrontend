@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --orang-c: #ffa20d;
+  --pp-color: #6a0dad;
+}
+.pp-c {
+  color: #6a0dad;
+  font-size: 30px;
+}
+
+.base-h1 {
+  color: var(--orang-c);
+  font-size: 40px;
+  font-weight: 600;
+}
+.base-h2 {
+  color: var(--orang-c);
+  font-size: 35px;
+  font-weight: 600;
+}
+.base-h3 {
+  color: var(--orang-c);
+  font-size: 25px;
+  font-weight: 600;
+}
+.base-h6 {
+  color: var(--orang-c);
+  font-size: 35px;
+}
+
+.base-p {
+  color: hsl(0deg 0% 27.45%);
+  font-size: 18px;
+}
+.bannerImg {
+  height: 400px;
+  img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+.mainTitle {
+  h2 {
+    color: #6a0dad;
+    font-weight: 600;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+}

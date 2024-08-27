@@ -1,0 +1,78 @@
+.aboutSection {
+  position: relative;
+  &::before {
+    content: "";
+    background-color: #d396ff91;
+    width: 40%;
+    height: 400px;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    top: 0;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  &::after {
+    content: "";
+    background-color: rgb(228 162 255 / 21%);
+    width: 40%;
+    height: 400px;
+    position: absolute;
+    right: 7%;
+    z-index: -1;
+    bottom: -4rem;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  .gridImg {
+    width: calc(100% - 120px);
+    height: 350px;
+    img {
+      height: 100%;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  .widOfgrid {
+    width: 120px;
+    background: #6a0dad;
+    position: relative;
+    span {
+      position: absolute;
+      top: 43%;
+      left: 0;
+      font-size: clamp(18px, 1.4583vw, 28px);
+      color: #fff;
+      transform: rotate(90deg) translate(-50%, -50%);
+      text-align: center;
+      z-index: 9;
+      right: 50%;
+      text-transform: uppercase;
+      @media (max-width: 768px) {
+        top: 50%;
+        left: 0;
+        transform: unset;
+        writing-mode: vertical-lr;
+      }
+    }
+    @media (max-width: 768px) {
+      display: none;
+      span {
+        display: none;
+      }
+    }
+  }
+  h3 {
+    font-size: 25px;
+    span {
+      color: #6a0dad;
+      font-weight: 600;
+    }
+  }
+  h4 {
+    font-size: 20px;
+  }
+}

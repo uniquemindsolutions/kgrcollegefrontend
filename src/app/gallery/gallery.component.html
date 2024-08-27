@@ -1,0 +1,668 @@
+<section class="gallerySection">
+  <div class="bannerImg">
+    <img data-fancybox="gallery" src="../../assets/Images/infrastructer-banner.png" alt=""
+      class="mba_banner_image w-100" />
+  </div>
+  <div class="container py-5">
+    <!-- <div class="row">
+      <h5 class="my-4">
+        A Student Development Program on
+        <span> LIKE, SHARE & SUBSCRIBE-YOU 19/8/2023</span>
+      </h5>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img
+            data-fancybox="gallery"
+            src="../../assets/Images/gallery/Img1.jpg"
+            alt="Gallery Images"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img
+            data-fancybox="gallery"
+            src="../../assets/Images/gallery/Img2.jpg"
+            alt="Gallery Images"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img
+            data-fancybox="gallery"
+            src="../../assets/Images/gallery/Img3.jpg"
+            alt="Gallery Images"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img
+            data-fancybox="gallery"
+            src="../../assets/Images/gallery/Img4.jpg"
+            alt="Gallery Images"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img
+            data-fancybox="gallery"
+            src="../../assets/Images/gallery/Img5.jpg"
+            alt="Gallery Images"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img
+            data-fancybox="gallery"
+            src="../../assets/Images/gallery/Img6.jpg"
+            alt="Gallery Images"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img
+            data-fancybox="gallery"
+            src="../../assets/Images/gallery/Img7.jpg"
+            alt="Gallery Images"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img
+            data-fancybox="gallery"
+            src="../../assets/Images/gallery/Img8.jpg"
+            alt="Gallery Images"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+    </div> -->
+    <div id="galleryContainer" class="row">
+      <!-- <h5 class="my-4" *ngIf="GalleryPhotosSource?.length > 0 && GalleryPhotosSource[0]?.heading">
+        {{ GalleryPhotosSource[0]?.heading }}
+      </h5> -->
+
+      <div class="col-6 col-md-2" *ngFor="let image of GalleryPhotosSource; let i=index;">
+        <div class="gridItem">
+          <img [src]="image['image']" alt="Gallery Image" class="img-fluid" data-fancybox="gallery" />
+        </div>
+      </div>
+    </div> 
+    <div id="galleryContainer" class="container">
+      <ng-container *ngFor="let group of groupedPhotos">
+
+        <!-- <h5 class="my-4">{{ group.heading }}</h5> -->
+        
+       
+        <div class="row">
+          <div class="col-6 col-md-2" *ngFor="let image of group.images">
+            <div class="gridItem">
+              <img [src]="image.image" alt="Gallery Image" class="img-fluid" data-fancybox="gallery" />
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+
+    <!-- <div class="row">
+      <h5 class="my-4">
+        A Student Development Program on An
+        <span> Empirical Research: Methodology and Tools on 18/7/2023</span>
+      </h5>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img9.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img10.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img11.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img12.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <h5 class="my-4">
+        Guest Lecture on 21st CENTURY SKILLS FOR
+        <span> MILLENNIUM MANAGER on 24th June 2023</span>
+      </h5>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img13.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img14.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img15.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img16.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img17.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+    </div> -->
+    <div class="row">
+      <!-- <h5 class="my-4">
+        Two Day National Conference on MSMEs –
+        <span>A ROAD TO SUSTAINABLE DEVELOPMENT on 12th and 13th April 2023</span>
+      </h5> -->
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img18.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img19.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img20.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img21.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img22.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img23.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img24.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img25.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img26.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img27.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img28.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img29.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img30.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img31.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img32.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img33.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img34.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img35.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img36.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img37.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img38.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img39.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img40.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- <h5 class="my-4">
+        One Day National Seminar on Emerging Trends in Marketing(ETM-2023) on
+        24/01/2023
+        <span>Trends in Marketing(ETM-2023) on 24/01/2023</span>
+      </h5> -->
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img41.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img42.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img43.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img44.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img45.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img46.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img47.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img48.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img49.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img50.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img51.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img52.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img53.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img55.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img56.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img57.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img58.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img59.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img60.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img61.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- <h5 class="my-4">
+        National Webinars
+        <span> on 24/11/2022</span>
+      </h5> -->
+      <div class="col-md-6">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img62.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img63.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- <h5 class="my-4">
+        15th August 2022
+        <span> Vajrothsava Vedukalu</span>
+      </h5> -->
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img64.jpg" alt="Gallery Images"
+            class="img-fluid" style="object-position: center" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img65.jpg" alt="Gallery Images"
+            class="img-fluid" style="object-position: center" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img66.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img67.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img68.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img70.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img71.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img72.jpg" alt="Gallery Images"
+            class="img-fluid" style="object-position: center" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img73.jpg" alt="Gallery Images"
+            class="img-fluid" style="object-position: center" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img74.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img75.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img76.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img77.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img78.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img79.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- <h5 class="my-4">
+        15th August 2022
+        <span> Vajrothsava Vedukalu(Sports)</span>
+      </h5> -->
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img80.jpg" alt="Gallery Images"
+            class="img-fluid" style="object-position: center" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img81.jpg" alt="Gallery Images"
+            class="img-fluid" style="object-position: center" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img82.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img83.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img84.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img85.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img86.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- <h5 class="my-4">
+        Graduation Day
+        <span> Celabration 2019-2021 Batch</span>
+      </h5> -->
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img87.jpg" alt="Gallery Images"
+            class="img-fluid" style="object-position: center" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img81.jpg" alt="Gallery Images"
+            class="img-fluid" style="object-position: center" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img82.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img83.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img84.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img85.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="gridItem">
+          <img data-fancybox="gallery" src="../../assets/Images/gallery/Img86.jpg" alt="Gallery Images"
+            class="img-fluid" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
