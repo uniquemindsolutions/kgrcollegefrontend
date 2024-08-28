@@ -1,112 +1,130 @@
 <section class="welcome-sec">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-6">
-                <img src="assets/Images/welcome-img.png" alt="Welcome Image" class="img-fluid">
-            </div>
-            <div class="col-lg-5 welcome-para  d-flex flex-column justify-content-center mt-5">
-                <h1 class="base-h1">Welcome to KGRITM</h1>
-                <p>
-                    KGR Institute of Technology and Management run by KGR Group of Industries, under the dynamic
-                    supervision of Sri Lion K. Govinda Reddy with a primary purpose of providing the quality education
-                    for all. The fact that we believe in 'fuelling the quest of knowledge'.KGRITM is not only emerging
-                    as a leader in the field of Management and pharmaceutical studies in Telangana but also is
-                    positioned as the best Professional Educational Institution. Since its inception, it is offering
-                    quality education with state of the art facilities, and provides sufficient amenities to achieve
-                    excellence and offers exposure to the Professional education system. The vision is driven by a
-                    spirit of social awareness, sincerity in offering the best education and striving for providing
-                    innovative solutions that serve the ever-changing com
-                </p>
-                <a href="#" class="btn btn-outline-orange mx-auto w-lg-30 w-md-100 text-center mb-3">Read More...</a>
-            </div>
-        </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+        <img src="assets/Images/welcome-img.png" alt="Welcome Image" class="img-fluid" />
+      </div>
+      <div class="col-lg-5 welcome-para d-flex flex-column justify-content-center mt-5" data-aos="fade-left"
+        data-aos-duration="1500">
+        <h1 class="base-h1">Welcome to KGRITM</h1>
+        <p>
+          KGR Institute of Technology and Management run by KGR Group of
+          Industries, under the dynamic supervision of Sri Lion K. Govinda Reddy
+          with a primary purpose of providing the quality education for all. The
+          fact that we believe in 'fuelling the quest of knowledge'.KGRITM is
+          not only emerging as a leader in the field of Management and
+          pharmaceutical studies in Telangana but also is positioned as the best
+          Professional Educational Institution. Since its inception, it is
+          offering quality education with state of the art facilities, and
+          provides sufficient amenities to achieve excellence and offers
+          exposure to the Professional education system. The vision is driven by
+          a spirit of social awareness, sincerity in offering the best education
+          and striving for providing innovative solutions that serve the
+          ever-changing com
+        </p>
+        <a href="#" class="btn btn-outline-orange mx-auto w-lg-30 w-md-100 text-center mb-3">Read More...</a>
+      </div>
     </div>
+  </div>
 </section>
 
 <section class="chairman-container-fluid mt-5 mb-5">
-    <div class="chariman-background">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-3 mb-lg-0">
-                    <img src="assets/Images/chairman-img.jpg" alt="" class="img-fluid">
-                </div>
-                <div class="col-lg-8">
-                    <h1 class="base-h1">Chairman Speaks</h1>
-                    <p class="Chairman-section-description">We are making a humble attempt to create a better tomorrow
-                        by imparting quality professional education with Industry Interface. We believe that student
-                        life should make a positive difference and the master's program should provide opportunity to
-                        build competency in the individual to face the challenges in professional career. Our class room
-                        teaching provide the necessary foundation in subject related knowledge and out of the class room
-                        activities facilitate the individual to develop Value Based Leadership qualities, personality
-                        traits and Social Responsibility.</p>
-                </div>
-            </div>
+  <div class="chariman-background">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-4 mb-3 mb-lg-0 py-5 text-center text-lg-start" data-aos="fade-right"
+          data-aos-duration="1000">
+          <img src="assets/Images/chairman-img.jpg" alt="" class="img-fluid" />
         </div>
+        <div class="col-lg-8" data-aos="fade-left" data-aos-duration="1500">
+          <h1 class="base-h1 text-center text-lg-start">Chairman Speaks</h1>
+          <p class="Chairman-section-description">
+            We are making a humble attempt to create a better tomorrow by
+            imparting quality professional education with Industry Interface. We
+            believe that student life should make a positive difference and the
+            master's program should provide opportunity to build competency in
+            the individual to face the challenges in professional career. Our
+            class room teaching provide the necessary foundation in subject
+            related knowledge and out of the class room activities facilitate
+            the individual to develop Value Based Leadership qualities,
+            personality traits and Social Responsibility.
+          </p>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <section class="gallery">
-    <div class="container">
-        <h2 class="base-h2 mt-5">Our Gallery</h2>
-        <div class="row">
-            <div class="col-lg-7">
-                <img src="assets/Images/home-gallery-img.png" alt="Gallery Photo 1" class="img-fluid">
-            </div>
-            <div class="col-lg-5">
-                <div class="College-Updates mb-5">
-                    <h3>Academic Programs:</h3>
-                    <hr>
-                    <p>МBА-2405 Seats ICET Code KGRM</p>
-                    <p>B.Pharmacy-100 Seats-EAMCET Cook: KGRR</p>
-                    <p>M.Pharmacy-45 Seats POECET Code: KGRRI</p>
-                    <p>Break-up of Seats:</p>
-                    <ol>
-                        <p>Pharmaceutics-15 seats</p>
-                        <p>Pharmaceutical Analysis-15 seats</p>
-                        <p>Pharmacology-15 seats</p>
-                    </ol>
-                </div>
-
-                <div class="College-Updates">
-                    <h3>College Updates</h3>
-                    <hr>
-                    <div *ngFor="let update of collegeSource; let i = index;">
-                        <p><a href="#" (click)="$event.preventDefault()" class="custom-link">{{ update.updates_text
-                                }}</a></p>
-                    </div>
-                    <!-- <p>MBA(CBCS) Semester (Regular) Results</p>
-                    <p>MBA(CBCS) Semostor (Regular) Time Table</p>
-                    <p>SF Pharmacy Download</p>
-                    <p>Anti lagging Committee</p>
-                    <p>Internal Complaint Committee</p>
-                    <p>SC/ST STANDING COMMITTEE</p> -->
-                </div>
-            </div>
+  <div class="container">
+    <h2 class="base-h2 mt-5 text-center text-lg-start" data-aos="fade-up" data-aos-duration="500">
+      Our Gallery
+    </h2>
+    <div class="row">
+      <div class="col-lg-7" data-aos="fade-up" data-aos-duration="1000">
+        <img src="assets/Images/home-gallery-img.png" alt="Gallery Photo 1" class="img-fluid" />
+      </div>
+      <div class="col-lg-5">
+        <div class="College-Updates mb-5" data-aos="fade-left" data-aos-duration="500">
+          <h3>Academic Programs:</h3>
+          <hr />
+          <p>МBА-2405 Seats ICET Code KGRM</p>
+          <p>B.Pharmacy-100 Seats-EAMCET Cook: KGRR</p>
+          <p>M.Pharmacy-45 Seats POECET Code: KGRRI</p>
+          <p>Break-up of Seats:</p>
+          <ol>
+            <p>Pharmaceutics-15 seats</p>
+            <p>Pharmaceutical Analysis-15 seats</p>
+            <p>Pharmacology-15 seats</p>
+          </ol>
         </div>
+
+        <div class="College-Updates" data-aos="fade-up" data-aos-duration="1500">
+          <h3>College Updates</h3>
+          <hr />
+          <!-- <p>MBA(CBCS) Semester (Regular) Results</p>
+          <p>MBA(CBCS) Semostor (Regular) Time Table</p>
+          <p>SF Pharmacy Download</p>
+          <p>Anti lagging Committee</p>
+          <p>Internal Complaint Committee</p>
+          <p>SC/ST STANDING COMMITTEE</p> -->
+          <div *ngFor="let update of collegeSource; let i = index;">
+            <p><a href="#" (click)="$event.preventDefault()" class="custom-link">{{ update.updates_text
+                }}</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 text-center" data-aos="fade-right" data-aos-duration="1500">
+        <a href="gallery" class="btn btn-outline-orange mx-auto w-lg-30 w-md-100 text-center my-3">Read More...</a>
+      </div>
     </div>
+  </div>
 </section>
 
 <section class="student_faculty pb-5 pt-5 mt-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-3 mb-md-0" *ngIf="StudentCountSource && StudentCountSource.length > 0">
-                <div class="box-students">
-                    <h5 class="pp-c">Students</h5>
-                    <h2>{{ StudentCountSource[0]?.student_count }}</h2>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-3 mb-md-0" *ngIf="FacultyCountSource && FacultyCountSource.length > 0">
-                <div class="box-students">
-                    <h5 class="pp-c">Faculty</h5>
-                    <h2>{{ FacultyCountSource[0]?.factuly_count }}</h2>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-3 mb-md-0" *ngIf="ProgrmasCountSource && ProgrmasCountSource.length > 0">
-                <div class="box-students">
-                    <h5 class="pp-c">Programs</h5>
-                    <h2>{{ ProgrmasCountSource[0]?.programs_count }}</h2>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-3 mb-md-0">
+        <div class="box-students" data-aos="fade-up" data-aos-duration="1000">
+          <h5 class="pp-c">Students</h5>
+          <!-- <h2>6740</h2> -->
+          <!-- <h2>{{ StudentCountSource[0]?.student_count }}</h2> -->
         </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-3 mb-md-0">
+        <div class="box-students" data-aos="fade-up" data-aos-duration="1500">
+          <h5 class="pp-c">Faculty</h5>
+          <!-- <h2>340</h2> -->
+          <!-- <h2>{{ FacultyCountSource[0]?.factuly_count }}</h2> -->
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-3 mb-md-0">
+        <div class="box-students" data-aos="fade-up" data-aos-duration="2000">
+          <h5 class="pp-c">Programs</h5>
+          <!-- <h2>45</h2> -->
+          <!-- <h2>{{ ProgrmasCountSource[0]?.programs_count }}</h2> -->
+        </div>
+      </div>
     </div>
+  </div>
 </section>
