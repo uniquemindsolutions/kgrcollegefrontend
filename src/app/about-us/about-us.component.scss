@@ -19,52 +19,14 @@
     width: 40%;
     height: 400px;
     position: absolute;
-    right: 7%;
+    right: 0%;
     z-index: -1;
     bottom: -4rem;
-    @media (max-width: 768px) {
+    @media (max-width: 991px) {
       display: none;
     }
   }
-  .gridImg {
-    width: calc(100% - 120px);
-    height: 350px;
-    img {
-      height: 100%;
-    }
-    @media (max-width: 768px) {
-      width: 100%;
-    }
-  }
-  .widOfgrid {
-    width: 120px;
-    background: #6a0dad;
-    position: relative;
-    span {
-      position: absolute;
-      top: 43%;
-      left: 0;
-      font-size: clamp(18px, 1.4583vw, 28px);
-      color: #fff;
-      transform: rotate(90deg) translate(-50%, -50%);
-      text-align: center;
-      z-index: 9;
-      right: 50%;
-      text-transform: uppercase;
-      @media (max-width: 768px) {
-        top: 50%;
-        left: 0;
-        transform: unset;
-        writing-mode: vertical-lr;
-      }
-    }
-    @media (max-width: 768px) {
-      display: none;
-      span {
-        display: none;
-      }
-    }
-  }
+
   h3 {
     font-size: 25px;
     span {

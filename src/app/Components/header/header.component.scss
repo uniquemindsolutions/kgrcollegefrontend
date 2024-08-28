@@ -2,6 +2,37 @@ a {
   text-decoration: none;
 }
 header {
+  &.fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    background: #fff;
+    @media (min-width: 991px) {
+      .logoTitle,
+      .topHeader {
+        display: none;
+      }
+      .navbar {
+        padding: 0;
+      }
+    }
+    @media (max-width: 991px) {
+      .topHeader {
+        display: none;
+      }
+      .logoTitle {
+        box-shadow: 14px 13px 11px 16px #1919192e;
+        .logoHeaderImg {
+          padding-top: 1rem !important;
+          padding-bottom: 1rem !important;
+        }
+      }
+
+      .navbar {
+        padding: 0;
+      }
+    }
+  }
   .topHeader {
     background: rgb(83 39 110) !important;
     .header-content {
@@ -84,9 +115,10 @@ header {
             text-decoration: none;
             padding: 10px;
             display: block;
-            &:hover {
+            &:hover,
+            .active {
               background: #fff;
-              color: #54276d;
+              color: #54276d !important;
             }
           }
         }
@@ -95,6 +127,12 @@ header {
           text-transform: uppercase;
           color: #fff;
           padding: 14px 10px;
+          @media (min-width: 991px) {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            cursor: pointer;
+          }
           &:hover {
             background: #fff;
             color: #54276d;
@@ -119,5 +157,29 @@ header {
         }
       }
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .single-menu a.nav-link.active,
+  .single-menu a.nav-link:hover {
+    color: #54276d !important;
+  }
+  .single-menu a.nav-link {
+    color: #fff !important;
+  }
+  .active {
+    background: #fff;
+    color: #54276d;
+  }
+  li.nav-item.active.custom-active li a.nav-link {
+    color: #fff !important;
+  }
+  li.nav-item.active.custom-active a.nav-link,
+  li.nav-item.active.custom-active a.nav-link:hover {
+    color: #54276d !important;
+  }
+  li.nav-item.active.custom-active li a.nav-link.active {
+    color: #54276d !important;
   }
 }

@@ -15,6 +15,7 @@
   position: relative;
   @media (max-width: 991px) {
     padding: 40px !important;
+    border-radius: 20px;
   }
 }
 .chairman_section p {
@@ -28,7 +29,7 @@
   .leftImg {
     position: absolute;
     width: 350px;
-    height: 350px;
+    height: 600px;
     left: 3%;
     top: 50%;
     transform: translateY(-50%);
@@ -51,7 +52,10 @@
   .blockquotes {
     position: absolute;
     left: -5%;
-    top: -7%;
+    top: -3%;
+    @media (max-width: 991px) {
+      top: -4%;
+    }
     svg {
       width: 100px;
       height: 100px;
@@ -59,9 +63,12 @@
     &.reverse {
       left: unset;
       top: unset;
-      right: -5%;
-      bottom: -7%;
+      right: -1%;
+      bottom: -3%;
       scale: -1;
+      @media (max-width: 991px) {
+        bottom: -3%;
+      }
     }
   }
   .rightImg {

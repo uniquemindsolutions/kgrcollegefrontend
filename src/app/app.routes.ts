@@ -27,13 +27,14 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ContactComponent } from './contact/contact.component';
 import { EVENTSandACTIVITIESComponent } from './eventsand-activities/eventsand-activities.component';
+import { EventGalleryComponent } from './event-gallery/event-gallery.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'welcome', component: WelcomeComponent },
-  { path: 'vision-mission', component: VisionMissionComponent },
-  { path: 'chairman-speaks', component: ChairmanSpeaksComponent },
-  { path: 'director-speaks', component: DirectorSpeaksComponent },
+  { path: 'aboutus/vision-mission', component: VisionMissionComponent },
+  { path: 'aboutus/chairman-speaks', component: ChairmanSpeaksComponent },
+  { path: 'aboutus/director-speaks', component: DirectorSpeaksComponent },
   { path: 'Academicprograms/MBA', component: MBAComponent },
   { path: 'Academicprograms/BPharmacy', component: BPharmacyComponent },
   { path: 'Academicprograms/MPharmacy', component: MPharmacyComponent },
@@ -43,7 +44,7 @@ export const routes: Routes = [
   { path: 'facilities/library', component: CentralLibraryComponent },
   { path: 'facilities/computerLab', component: ComputerLabComponent },
   { path: 'facilities/extracurricular', component: ExtracurricularComponent },
-  { path: 'facilities/pharamacyLab', component: PharmacyLabComponent},
+  { path: 'facilities/pharamacyLab', component: PharmacyLabComponent },
   { path: 'facilities/committees', component: CommitteesComponent },
   { path: 'faculty/Mba', component: FacultyMbaComponent },
   { path: 'faculty/pharmacy', component: FacultypharmacyComponent },
@@ -51,15 +52,12 @@ export const routes: Routes = [
   { path: 'adminssion/bpharmacy', component: BpharmacyComponent },
   { path: 'adminssion/mpharmacy', component: MpharmacyComponent },
   { path: 'adminssion/application', component: ApplicationComponent },
-  { path: 'placement-cell', component: PlacementCellComponent },
-  { path: 'registration', component: RegistrationComponent },
+  { path: 'placement/placement-cell', component: PlacementCellComponent },
+  { path: 'placement/registration', component: RegistrationComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'eventsandactivites', component: EVENTSandACTIVITIESComponent },
+  { path: 'event-gallery', component: EventGalleryComponent },
 
-  {
-    path: 'about-us',
-    component: AboutUsComponent,
-    children: [],
-  },
+  { path: 'aboutus/about-us', component: AboutUsComponent },
 ];
