@@ -1,7 +1,7 @@
 <section class="facultyMBA">
   <div class="bannerImg">
     <img
-      src="https://img.freepik.com/free-photo/female-speaker-giving-presentation-hall-university-workshop-audience-conference-hall_155003-27432.jpg?t=st=1721447538~exp=1721451138~hmac=886c511ca396f8097e6030f22882691f8d28d57b646a54c08981cc4dd8f04eb2&w=900"
+      src="assets/Images/faculty.jpg"
       alt=""
       class="mba_banner_image w-100"
     />
@@ -9,16 +9,22 @@
   <div class="container">
     <div class="row align-items-center my-5">
       <div class="col-md-12">
-        <h1 class="pp-c my-2">Faculty Resources</h1>
+        <h1 class="pp-c my-2" data-aos="fade-up" data-aos-duration="500">
+          Faculty Resources
+        </h1>
       </div>
     </div>
 
     <div class="gridItem">
       <div class="row row-cols-1 row-cols-md-3 g-4 mb-3">
         <div class="col">
-          <div class="card departmentCard">
+          <div
+            class="card departmentCard"
+            data-aos="fade-up"
+            data-aos-duration="500"
+          >
             <img
-              src="../../assets/Images/PVR2.jpg"
+              src="assets/Images/PVR2.jpg"
               class="card-img-top"
               alt="..."
             />
@@ -35,9 +41,13 @@
           </div>
         </div>
         <div class="col">
-          <div class="card departmentCard">
+          <div
+            class="card departmentCard"
+            data-aos="fade-up"
+            data-aos-duration="500"
+          >
             <img
-              src="../../assets/Images/svl.jpg"
+              src="assets/Images/svl.jpg"
               class="card-img-top"
               alt="..."
             />
@@ -54,9 +64,13 @@
           </div>
         </div>
         <div class="col">
-          <div class="card departmentCard">
+          <div
+            class="card departmentCard"
+            data-aos="fade-up"
+            data-aos-duration="500"
+          >
             <img
-              src="../../assets/Images/JVR1.jpg"
+              src="assets/Images/JVR1.jpg"
               class="card-img-top"
               alt="..."
             />
@@ -75,11 +89,15 @@
       </div>
 
       <div class="card my-5">
-        <div class="card-header tableHeader">
+        <div
+          class="card-header tableHeader"
+          data-aos="fade-up"
+          data-aos-duration="500"
+        >
           Faculty for Business Management
         </div>
         <div class="card-body">
-          <!-- <div class="table my-2 table-responsive">
+          <div class="table my-2 table-responsive">
             <table class="table table-bordered">
               <thead class="table-light">
                 <tr class="table-active">
@@ -90,7 +108,7 @@
                   <th>Experience Teaching</th>
                 </tr>
               </thead>
-              <tbody>
+              <!-- <tbody>
                 <tr>
                   <td>1</td>
                   <td>Dr. S. Vijaya Lakshmi</td>
@@ -282,7 +300,7 @@
                   <td>MBA</td>
                   <td>02 Years</td>
                 </tr>
-                
+
                 <tr>
                   <td>25</td>
                   <td>Mrs. P. Kalyani</td>
@@ -290,21 +308,8 @@
                   <td>B.Ed, MBA</td>
                   <td>02 Years</td>
                 </tr>
-              </tbody>
-            </table>
-          </div> -->
-          <div class="table my-2 table-responsive">
-            <table class="table table-bordered">
-              <thead class="table-light">
-                <tr class="table-active">
-                  <th>Sl No:</th>
-                  <th>Name</th>
-                  <th>Designation</th>
-                  <th>Qualification</th>
-                  <th>Experience Teaching</th>
-                </tr>
-              </thead>
-              <tbody>
+              </tbody> -->
+               <tbody>
                 <tr *ngFor="let faculty of alumnidataSource; let i = index">
                   <td>{{ i + 1 }}</td> <!-- Sl No -->
                   <td>{{ faculty.name }}</td> <!-- Name -->
@@ -315,7 +320,6 @@
               </tbody>
             </table>
           </div>
-          
         </div>
       </div>
     </div>

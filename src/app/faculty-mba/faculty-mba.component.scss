@@ -11,14 +11,19 @@
   .departmentCard {
     line-height: 30px;
     height: 100%;
+    transform: scale(0.8);
+    transition: all 1s ease-in-out;
+    h5 {
+      color: #8e44ad;
+    }
     img {
       height: 350px;
       object-fit: cover;
       object-position: top;
     }
     &:hover {
-      transform: scale(0.9);
-      transition: all 1s ease-in-out;
+      transform: scale(1);
+      // transition: all 1s ease-in-out;
     }
   }
   .tableHeader {
