@@ -1,0 +1,276 @@
+<!-- <nav class="navbar navbar-expand-lg pb-0">
+    <div class="container-fluid p-0">
+      <div class="collapse navbar-collapse" id="MenuBarToggle">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a
+              class="nav-link home"
+              [routerLink]="['/']"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              data-bs-toggle="collapse"
+              data-bs-target="#aboutDropDown"
+              aria-controls="aboutDropDown"
+              aria-expanded="false"
+              aria-label="aboutDropDown"
+              >About Us
+              <span class="ps-2"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-chevron-down"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                />
+              </svg>
+            </span>  
+            </a>
+            <ul id="aboutDropDown">
+                <li>
+                  <a routerLink="/about-us" routerLinkActive="active"
+                    >About KGRITM</a
+                  >
+                </li>
+                <li>
+                  <a routerLink="/vision-mission" routerLinkActive="active"
+                    >Vision &amp; Mission</a
+                  >
+                </li>
+                <li>
+                  <a routerLink="/chairman-speaks" routerLinkActive="active"
+                    >Chairman Speaks</a
+                  >
+                </li>
+                <li>
+                  <a routerLink="/director-speaks" routerLinkActive="active"
+                    >Director Speaks</a
+                  >
+                </li>
+              </ul>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [routerLink]="['/gallery']"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Gallery</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [routerLink]="['/contact']"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Contact Us</a
+            >
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+  <nav class="navbar navbar-expand-lg pb-0">
+    <div class="container-fluid p-0">
+      <div class="collapse navbar-collapse" id="MenuBarToggle">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 top-custom-menu">
+            <li class="nav-item dropdown">
+                <a
+                  class="nav-link"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  >About Us
+                  <span>
+                  <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-chevron-down"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                  />
+                </svg></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" [routerLink]="['/about-us']">About KGRITM</a></li>
+                  <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/vision-mission']">Vision & Mission</a></li>
+                  <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/chairman-speaks']">Chairman Speaks</a></li>
+                  <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/director-speaks']">Director Speaks</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  >Academic Programs
+
+                  <span>
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-chevron-down"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                    />
+                  </svg></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/Academicprograms/MBA']">M.B.A.</a></li>
+                  <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/Academicprograms/BPharmacy']">B.Pharmacy</a></li>
+                  <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/Academicprograms/MPharmacy']">M.Pharmacy</a></li>
+                </ul>
+              </li>
+            <li class="nav-item dropdown">
+                <a
+                class="nav-link"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >FACILITIES
+                <span>
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-chevron-down"
+                    viewBox="0 0 16 16"
+                >
+                    <path
+                    fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                    />
+                </svg></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/facilities/Infrastructure']">Infrastructure</a></li>
+                    <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/facilities/library']">Central Library</a></li>
+                    <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/facilities/computerLab']">Computer Lab</a></li>
+                    <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/facilities/extracurricular']">Extracurricular</a></li>
+                    <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/facilities/pharamacyLab']">Pharmacy Lab</a></li>
+                    <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/facilities/committees']">committees</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a
+                href="#"
+                class="nav-link"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >FACULTY
+                <span>
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-chevron-down"
+                    viewBox="0 0 16 16"
+                >
+                    <path
+                    fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                    />
+                </svg></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/faculty/Mba']">MBA</a></li>
+                    <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/faculty/pharmacy']">Pharmacy</a></li>
+                </ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+                <a
+                href="#"
+                class="nav-link"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >ADMISSIONS
+                <span>
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-chevron-down"
+                    viewBox="0 0 16 16"
+                >
+                    <path
+                    fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                    />
+                </svg></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/adminssion/mba']">MBA</a></li>
+                    <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/adminssion/bpharmacy']">Pharmacy</a></li>
+                    <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/adminssion/mpharmacy']">M.Pharmacy</a></li>
+                    <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/adminssion/application']">Admission &amp; Application</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a
+                  class="nav-link"
+                  [routerLink]="['/gallery']"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  >GALLERY</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a
+                href="#"
+                class="nav-link"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >PLACEMENTS
+                <span>
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-chevron-down"
+                    viewBox="0 0 16 16"
+                >
+                    <path
+                    fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                    />
+                </svg></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/placement-cell']">Placement Cell</a></li>
+                    <li><a class="dropdown-item" routerLinkActive="active" [routerLink]="['/registration']">Online Registration</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a
+                  class="nav-link"
+                  [routerLink]="['/eventsandactivites']"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  >EVENTS & ACTIVITIES</a>
+            </li>
+            
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  

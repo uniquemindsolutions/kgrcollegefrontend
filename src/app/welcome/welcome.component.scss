@@ -3,20 +3,21 @@
 }
 .welcome-para p {
   color: gray;
+  font-size: 18px;
 }
 .btn-outline-orange {
   border-color: var(--orang-c);
   color: var(--orang-c);
   padding: 10px 20px;
   font-size: 16px;
-  width: 14vw;
+  min-width: 14vw;
   border-radius: 25px;
   text-decoration: none;
   background-color: transparent;
 }
 .welcome-para,
 .Chairman-section-description {
-  text-align: justify;
+  text-align: center;
 }
 .btn-outline-orange:hover {
   background-color: var(--orang-c);
@@ -55,8 +56,6 @@
   color: #f0f0f0;        
   text-decoration: underline;
 }
-
-
 .student_faculty {
   background-color: #6a0dad;
 }

@@ -5,9 +5,23 @@
 }
 .pp-c {
   color: #6a0dad;
-  font-size: 30px;
 }
-
+.modal-backdrop {
+  opacity: 0.9 !important;
+}
+// @media (min-width: 1400px) {
+//   .container,
+//   .container-lg,
+//   .container-md,
+//   .container-sm,
+//   .container-xl,
+//   .container-xxl {
+//     max-width: 1520px !important;
+//   }
+// }
+.row {
+  overflow: hidden;
+}
 .base-h1 {
   color: var(--orang-c);
   font-size: 40px;
@@ -26,18 +40,25 @@
 .base-h6 {
   color: var(--orang-c);
   font-size: 35px;
+  font-weight: 600;
 }
-
+// .base-p{
+//     color:gray;
+//     font-size: 20px;
+// }
 .base-p {
-  color: hsl(0deg 0% 27.45%);
-  font-size: 18px;
+  color: gray;
+  font-size: 15px;
 }
 .bannerImg {
-  height: 400px;
+  height: 420px;
   img {
     height: 100%;
     object-fit: cover;
     object-position: center;
+  }
+  @media (max-width: 991px) {
+    height: 100%;
   }
 }
 .mainTitle {
@@ -47,4 +68,65 @@
     font-size: 30px;
     text-transform: uppercase;
   }
+}
+// .gridItemImg {
+//   width: calc(100% - 80px);
+//   height: 350px;
+//   img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//   }
+// }
+// .widOfgrid {
+//   width: 80px;
+// }
+
+.gridItemImg {
+  width: calc(100% - 80px);
+  height: 350px;
+  img {
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+.widOfgrid {
+  width: 80px;
+  height: 350px;
+  background: #6a0dad;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    // position: absolute;
+    // top: 43%;
+    // left: 0;
+    // transform: rotate(90deg) translate(-50%, -50%);
+    // right: 50%;
+
+    text-transform: uppercase;
+    font-size: clamp(18px, 1.4583vw, 28px);
+    color: #ffffff;
+    z-index: 9;
+    text-align: center;
+    // transform: rotate(90deg);
+    writing-mode: vertical-rl;
+    @media (max-width: 768px) {
+      // top: 50%;
+      // left: 0;
+      // transform: unset;
+      // writing-mode: vertical-lr;
+    }
+  }
+  // @media (max-width: 768px) {
+  //   display: none;
+  //   span {
+  //     display: none;
+  //   }
+  // }
 }
