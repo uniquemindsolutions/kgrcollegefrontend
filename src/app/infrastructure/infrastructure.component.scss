@@ -12,12 +12,12 @@
     h5 {
       color: var(--orang-c) !important    ;
     }
-    img {
-      object-fit: cover;
-      height: 100%;
-      min-height: 313px;
-      width: 100%;
-    }
+    // img {
+    //   object-fit: cover;
+    //   height: 100%;
+    //   min-height: 313px;
+    //   width: 100%;
+    // }
   }
   .infrastructSec {
     &::before {
@@ -39,7 +39,7 @@
       width: 40%;
       height: 400px;
       position: absolute;
-      right: 7%;
+      right: 0;
       z-index: -1;
       bottom: -4rem;
       @media (max-width: 768px) {
@@ -47,47 +47,12 @@
       }
     }
     .leftContent {
-      .gridImg {
-        width: calc(100% - 120px);
-        height: 400px;
-        overflow: hidden;
+      .gridItem {
         img {
-          min-height: 350px;
-          object-fit: cover;
-          height: 100%;
-          object-position: top;
         }
       }
     }
-    .widOfgrid {
-      width: 120px;
-      background: #6a0dad;
-      position: relative;
-      span {
-        position: absolute;
-        top: 43%;
-        left: 0;
-        font-size: clamp(18px, 1.4583vw, 28px);
-        color: #fff;
-        transform: rotate(90deg) translate(-50%, -50%);
-        text-align: center;
-        z-index: 9;
-        right: 50%;
-        text-transform: uppercase;
-        @media (max-width: 768px) {
-          top: 50%;
-          left: 0;
-          transform: unset;
-          writing-mode: vertical-lr;
-        }
-      }
-      @media (max-width: 768px) {
-        width: 15%;
-        span {
-          display: none;
-        }
-      }
-    }
+
     h3 {
       font-size: 25px;
       span {

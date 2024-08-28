@@ -1,0 +1,231 @@
+
+//   .navbar-nav .dropdown-menu {
+//     display: none;
+//     position: absolute;
+//     top: 100%;
+//     left: 0;
+//     z-index: 1000;
+//     float: left;
+//     min-width: 10rem;
+//     padding: 0.5rem 0;
+//     margin: 0rem 0 0;
+//     font-size: 1rem;
+//     color: #fff;
+//     text-align: left;
+//     list-style: none;
+//     background: rgb(83 39 110);
+//     background-clip: padding-box;
+//     border: 1px solid rgba(0, 0, 0, 0.15);
+//     border-radius: 0.25rem;
+//   }
+  
+
+//   .navbar-nav .dropdown:hover > .dropdown-menu {
+//     display: block;
+//   }
+  
+//   .navbar-nav .dropdown-item {
+//     padding: 0.25rem 1.5rem;
+//     color: #fff;
+//     text-decoration: none;
+//     display: block;
+//   }
+  
+//   .navbar-nav .dropdown-item:hover {
+//     background-color: #f8f9fa;
+//     color: #000;
+//   }
+  
+//   .nav-item {
+//     position: relative;
+//   }
+  
+//   .navbar-expand-lg .navbar-collapse
+//   {
+//     background: #54276d;
+//     font-size: 0.9rem;
+//     .nav-link{
+//         color: #fff;
+//     }
+//     .nav-item .active {
+//         font-weight: bold;
+//         color: #54276d;
+//         background: #fff;
+//       }
+//   }
+//   #MenuBarToggle {
+//     .navbar-nav {
+//       width: 100%;
+//       justify-content: space-evenly;
+//       background: rgb(83 39 110) !important;
+//       .nav-item {
+//         ul {
+//           display: none;
+
+//           @media (min-width: 991px) {
+//             position: absolute;
+//             z-index: 9;
+//             width: 250px;
+//             padding-left: 10px;
+//             list-style: none;
+//             background: #54276d;
+//             box-shadow: 4px 4px 6px 6px rgba(15, 15, 15, 0.2901960784);
+//           }
+//           a {
+//             color: #fff;
+//             text-decoration: none;
+//             padding: 10px;
+//             display: block;
+//             &:hover,
+//             .active {
+//               background: #fff;
+//               color: #54276d;
+//             }
+//           }
+//         }
+//         a.nav-link {
+//           font-size: 14px;
+//           text-transform: uppercase;
+//         //   color: #fff;
+//           padding: 14px 10px;
+//           @media (min-width: 991px) {
+//             display: flex;
+//             width: 100%;
+//             justify-content: center;
+//           }
+//           &:hover {
+//             background: #fff;
+//             color: #54276d;
+//           }
+//           @media (max-width: 991px) {
+//             span {
+//               position: absolute;
+//               right: 5%;
+//             }
+//           }
+//         }
+//       }
+//       .nav-item:hover {
+//         ul {
+//           list-style: none;
+//           &.show {
+//             display: block;
+//           }
+//           @media (min-width: 991px) {
+//             display: block;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+
+
+.navbar-nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0rem 0 0;
+    font-size: 1rem;
+    color: #fff;
+    text-align: left;
+    list-style: none;
+    background-color: rgb(83, 39, 110);
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+}
+
+/* Show the dropdown on hover */
+.nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+/* Styling for dropdown items */
+.navbar-nav .dropdown-item {
+    padding: 0.25rem 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+/* Styling for active nav links */
+.navbar-expand-lg .navbar-collapse {
+    background: #54276d;
+    font-size: 0.9rem;
+}
+
+.navbar-expand-lg .navbar-collapse .nav-link {
+    color: #fff;
+}
+
+.navbar-expand-lg .navbar-collapse .nav-item .active {
+    font-weight: bold;
+    color: #54276d;
+    background: #fff;
+}
+
+/* Additional nav item styling */
+.nav-item {
+    position: relative;
+}
+
+#MenuBarToggle .navbar-nav {
+    width: 100%;
+    justify-content: space-evenly;
+    background: rgb(83, 39, 110) !important;
+}
+
+@media (min-width: 991px) {
+    .nav-item ul {
+        display: none;
+        position: absolute;
+        z-index: 9;
+        width: 250px;
+        padding-left: 10px;
+        list-style: none;
+        background: #54276d;
+        box-shadow: 4px 4px 6px rgba(15, 15, 15, 0.29);
+    }
+}
+
+
+
+/* Example CSS for mobile responsiveness */
+@media (max-width: 768px) {
+    .menu {
+      display: none; /* Hide menu by default */
+    }
+  
+    .menu.show {
+      display: block; /* Show menu when toggled */
+    }
+  
+    .toggle-button {
+      display: block; /* Show toggle button */
+    }
+  }
+  
+
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000; /* Ensure it's on top */
+  }
+  
+  body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }

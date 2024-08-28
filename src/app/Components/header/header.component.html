@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" ng-app>
   <div class="topHeader">
     <div class="container">
       <div class="row">
@@ -35,8 +35,8 @@
       </div>
     </div>
   </div>
-  <div class="container">
-    <div class="logoHeaderImg d-flex gap-4 mb-4 pt-4 align-items-center">
+  <div class="container-lg logoTitle px-5 px-lg-0">
+    <div class="logoHeaderImg d-flex gap-4 py-5 align-items-center">
       <a href="./" class="d-flex align-items-center">
         <div>
           <img
@@ -79,16 +79,20 @@
     </div>
   </div>
 
-  
-  <div id="nav">
+  <div id="nav" ng-class="{active}" ng-click="$event.preventDefault()">
+    <!-- <app-navigation></app-navigation> -->
     <nav class="navbar navbar-expand-lg pb-0">
       <div class="container-fluid p-0">
         <div class="collapse navbar-collapse" id="MenuBarToggle">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item active">
+            <li
+              class="nav-item"
+              [ngClass]="{ 'custom-active': isParentActive(['/aboutus']) }"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: false }"
+            >
               <a
-                class="nav-link"
-                href="#"
+                class="nav-link home"
                 data-bs-toggle="collapse"
                 data-bs-target="#aboutDropDown"
                 aria-controls="aboutDropDown"
@@ -112,16 +116,50 @@
                 </span>
               </a>
               <ul id="aboutDropDown">
-                <li><a routerLink="/about-us">About KGRITM</a></li>
-                <li><a routerLink="/vision-mission">Vision &amp; Mission</a></li>
-                <li><a routerLink="/chairman-speaks">Chairman Speaks</a></li>
-                <li><a routerLink="/director-speaks">Director Speaks</a></li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    [routerLink]="['/aboutus/about-us']"
+                    >About KGRITM</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    [routerLink]="['/aboutus/vision-mission']"
+                    >Vision &amp; Mission</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    [routerLink]="['/aboutus/chairman-speaks']"
+                    >Chairman Speaks</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    [routerLink]="['/aboutus/director-speaks']"
+                    >Director Speaks</a
+                  >
+                </li>
               </ul>
             </li>
-            <li class="nav-item">
+            <li
+              class="nav-item"
+              [ngClass]="{
+                'custom-active': isParentActive(['/Academicprograms'])
+              }"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: false }"
+            >
               <a
                 class="nav-link"
-                href="#"
                 data-bs-toggle="collapse"
                 data-bs-target="#academicDropDown"
                 aria-controls="academicDropDown"
@@ -145,17 +183,58 @@
                 </span>
               </a>
               <ul id="academicDropDown">
-                <li><a routerLink="/Academicprograms/MBA">M.B.A.</a></li>
-                <li><a routerLink="/Academicprograms/BPharmacy">B.Pharmacy</a></li>
-                <li><a routerLink="/Academicprograms/MPharmacy">M.Pharmacy</a></li>
-                <li><a routerLink="/Academicprograms/Syllabus">Syllabus</a></li>
-                <li><a routerLink="/Academicprograms/Alumni">Alumni</a></li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    [routerLink]="['/Academicprograms/MBA']"
+                    >M.B.A.</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    [routerLink]="['/Academicprograms/BPharmacy']"
+                    >B.Pharmacy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    [routerLink]="['/Academicprograms/MPharmacy']"
+                    >M.Pharmacy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    [routerLink]="['/Academicprograms/Syllabus']"
+                    >Syllabus</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    [routerLink]="['/Academicprograms/Alumni']"
+                    >Alumni</a
+                  >
+                </li>
               </ul>
             </li>
-            <li class="nav-item">
+            <li
+              class="nav-item"
+              [ngClass]="{ 'custom-active': isParentActive(['/facilities']) }"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: false }"
+            >
               <a
                 class="nav-link"
-                href="#"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
                 data-bs-toggle="collapse"
                 data-bs-target="#facilitiesDropDown"
                 aria-controls="facilitiesDropDown"
@@ -179,17 +258,63 @@
                 </span>
               </a>
               <ul id="facilitiesDropDown">
-                <li><a routerLink="/facilities/Infrastructure">Infrastructure</a></li>
-                <li><a routerLink="/facilities/library">Central Library</a></li>
-                <li><a routerLink="/facilities/computerLab">Computer Lab</a></li>
-                <li><a routerLink="/facilities/extracurricular">Extracurricular</a></li>
-                <li><a routerLink="/facilities/pharamacyLab">Pharmacy Lab</a></li>
-                <li><a routerLink="/facilities/committees">committees</a></li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    routerLink="/facilities/Infrastructure"
+                    >Infrastructure</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    routerLink="/facilities/library"
+                    >Central Library</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    routerLink="/facilities/computerLab"
+                    >Computer Lab</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    routerLink="/facilities/extracurricular"
+                    >Extracurricular</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    routerLink="/facilities/pharamacyLab"
+                    >Pharmacy Lab</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    routerLink="/facilities/committees"
+                    >committees</a
+                  >
+                </li>
               </ul>
             </li>
-            <li class="nav-item">
+            <li
+              class="nav-item"
+              [ngClass]="{ 'custom-active': isParentActive(['/faculty']) }"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: false }"
+            >
               <a
-                href="#"
                 class="nav-link"
                 data-bs-toggle="collapse"
                 data-bs-target="#facilityDropDown"
@@ -214,14 +339,32 @@
                 </span>
               </a>
               <ul id="facilityDropDown">
-                <li><a href="faculty/Mba">MBA</a></li>
-                <li><a href="faculty/pharmacy">Pharmacy</a></li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    [routerLink]="['faculty/Mba']"
+                    >MBA</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    [routerLink]="['faculty/pharmacy']"
+                    >Pharmacy</a
+                  >
+                </li>
               </ul>
             </li>
-            <li class="nav-item">
+            <li
+              class="nav-item"
+              [ngClass]="{ 'custom-active': isParentActive(['/adminssion']) }"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: false }"
+            >
               <a
                 class="nav-link"
-                href="#"
                 data-bs-toggle="collapse"
                 data-bs-target="#admissionDropDown"
                 aria-controls="admissionDropDown"
@@ -245,21 +388,58 @@
                 </span>
               </a>
               <ul id="admissionDropDown">
-                <li><a routerLink="/adminssion/mba">MBA</a></li>
-                <li><a routerLink="/adminssion/bpharmacy">B.Pharmacy</a></li>
-                <li><a routerLink="/adminssion/mpharmacy">M.Pharmacy</a></li>
-                <li> <a routerLink="/adminssion/application"> Admission &amp; Application</a
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    [routerLink]="['/adminssion/mba']"
+                    >MBA</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    [routerLink]="['/adminssion/bpharmacy']"
+                    >B.Pharmacy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    [routerLink]="['adminssion/mpharmacy']"
+                    >M.Pharmacy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    routerLink="/adminssion/application"
+                  >
+                    Admission &amp; Application</a
                   >
                 </li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/gallery">GALLERY</a>
+            <li class="nav-item single-menu">
+              <a
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                class="nav-link"
+                routerLink="/gallery"
+                >GALLERY</a
+              >
             </li>
-            <li class="nav-item">
+            <li
+              class="nav-item"
+              [ngClass]="{ 'custom-active': isParentActive(['/placement']) }"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: false }"
+            >
               <a
                 class="nav-link"
-                href="#"
                 data-bs-toggle="collapse"
                 data-bs-target="#placementDropDown"
                 aria-controls="placementDropDown"
@@ -283,14 +463,32 @@
                 </span>
               </a>
               <ul id="placementDropDown">
-                <li><a routerLink="/placement-cell">Placement Cell</a></li>
-                <li class="">
-                  <a routerLink="/registration">Online Registration</a>
+                <li>
+                  <a
+                    routerLinkActive="active"
+                    class="nav-link"
+                    [routerLink]="['placement/placement-cell']"
+                    >Placement Cell</a
+                  >
+                </li>
+                <li>
+                  <a
+                    routerLinkActive="active"
+                    class="nav-link"
+                    [routerLink]="['placement/registration']"
+                    >Online Registration</a
+                  >
                 </li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/eventsandactivites">EVENTS & ACTIVITIES</a>
+            <li class="nav-item single-menu">
+              <a
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                class="nav-link"
+                routerLink="/event-gallery"
+                >EVENTS & ACTIVITIES</a
+              >
             </li>
           </ul>
         </div>
