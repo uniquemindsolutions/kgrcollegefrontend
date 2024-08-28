@@ -1,4 +1,4 @@
-<section class="positive">
+<!-- <section class="positive">
   <div class="bannerImg">
     <img
       src="assets/Images/registrationBanner.jpg"
@@ -112,6 +112,188 @@
                   Rest
                 </button>
               </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<section class="positive">
+  <div class="bannerImg">
+    <img
+      src="assets/Images/registrationBanner.jpg"
+      alt="Registration Banner"
+      class="mba_banner_image w-100"
+    />
+  </div>
+  <div class="container py-5">
+    <div class="row position-relative client py-5">
+      <div class="col-lg-9 m-auto">
+        <div class="registration">
+          <h1 class="ppc mb-5 text-center">Online <span>Registration</span></h1>
+          <form (submit)="onSubmit($event)">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="studentName" class="form-label">Student Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="studentName"
+                    name="studentName"
+                    [(ngModel)]="registrationData.studentName"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="fatherName" class="form-label">Father's Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="fatherName"
+                    name="fatherName"
+                    [(ngModel)]="registrationData.fatherName"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="dob" class="form-label">Date of Birth</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="dob"
+                    name="dob"
+                    [(ngModel)]="registrationData.dob"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="address" class="form-label">Permanent Address</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address"
+                    name="address"
+                    [(ngModel)]="registrationData.address"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="contact" class="form-label">Contact Number</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="contact"
+                    name="contact"
+                    [(ngModel)]="registrationData.contact"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    [(ngModel)]="registrationData.email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="mba" class="form-label">MBA Status</label>
+                  <select
+                    id="mba"
+                    class="form-control"
+                    name="mba"
+                    [(ngModel)]="registrationData.mba"
+                    required
+                  >
+                    <option value="Pursuing">Pursuing</option>
+                    <option value="Passed">Passed</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="passedYear" class="form-label">If Passed, Year</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="passedYear"
+                    name="passedYear"
+                    [(ngModel)]="registrationData.passedYear"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="college" class="form-label">College</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="college"
+                    name="college"
+                    [(ngModel)]="registrationData.college"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="university" class="form-label">University</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="university"
+                    name="university"
+                    [(ngModel)]="registrationData.university"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="percentage" class="form-label">Percentage of Marks</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="percentage"
+                    name="percentage"
+                    [(ngModel)]="registrationData.percentage"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="upload" class="form-label">Upload CV or Resume</label>
+                  <input
+                  type="file"
+                  class="form-control"
+                  id="upload"
+                  name="upload"
+                  (change)="onFileChange($event)"
+                />
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end mt-3 gap-3">
+              <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+              <button type="reset" name="reset" class="btn btn-secondary">Reset</button>
             </div>
           </form>
         </div>
