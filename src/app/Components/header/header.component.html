@@ -26,7 +26,7 @@
               <a href="#" class="socialmedia-icon"
                 ><i class="fa-brands fa-instagram"></i
               ></a>
-              <a href="#" class="socialmedia-icon"
+              <a href="https://youtu.be/vzmURVFfwrk" target="_blank" class="socialmedia-icon"
                 ><i class="fa-brands fa-youtube"></i
               ></a>
             </div>
@@ -136,8 +136,8 @@
                   <a
                     class="nav-link"
                     routerLinkActive="active"
-                    [routerLink]="['/aboutus/chairman-speaks']"
-                    >Chairman Speaks</a
+                    [routerLink]="['/aboutus/secretary']"
+                    >Secretary Speaks</a
                   >
                 </li>
                 <li>
@@ -146,6 +146,14 @@
                     routerLinkActive="active"
                     [routerLink]="['/aboutus/director-speaks']"
                     >Director Speaks</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="nav-link"
+                    routerLinkActive="active"
+                    [routerLink]="['/aboutus/principals-speaks']"
+                    >Principals Speak</a
                   >
                 </li>
               </ul>
@@ -282,14 +290,14 @@
                     >Computer Lab</a
                   >
                 </li>
-                <li>
+                <!-- <li>
                   <a
                     class="nav-link"
                     routerLinkActive="active"
                     routerLink="/facilities/extracurricular"
                     >Extracurricular</a
                   >
-                </li>
+                </li> -->
                 <li>
                   <a
                     class="nav-link"
@@ -359,7 +367,7 @@
             </li>
             <li
               class="nav-item"
-              [ngClass]="{ 'custom-active': isParentActive(['/adminssion']) }"
+              [ngClass]="{ 'custom-active': isParentActive(['/admission']) }"
               routerLinkActive="active"
               [routerLinkActiveOptions]="{ exact: false }"
             >
@@ -392,7 +400,7 @@
                   <a
                     class="nav-link"
                     routerLinkActive="active"
-                    [routerLink]="['/adminssion/mba']"
+                    [routerLink]="['/admission/mba']"
                     >MBA</a
                   >
                 </li>
@@ -400,7 +408,7 @@
                   <a
                     class="nav-link"
                     routerLinkActive="active"
-                    [routerLink]="['/adminssion/bpharmacy']"
+                    [routerLink]="['/admission/bpharmacy']"
                     >B.Pharmacy</a
                   >
                 </li>
@@ -408,7 +416,7 @@
                   <a
                     class="nav-link"
                     routerLinkActive="active"
-                    [routerLink]="['adminssion/mpharmacy']"
+                    [routerLink]="['admission/mpharmacy']"
                     >M.Pharmacy</a
                   >
                 </li>
@@ -416,7 +424,7 @@
                   <a
                     class="nav-link"
                     routerLinkActive="active"
-                    routerLink="/adminssion/application"
+                    routerLink="/admission/application"
                   >
                     Admission &amp; Application</a
                   >
