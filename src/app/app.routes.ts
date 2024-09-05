@@ -28,13 +28,17 @@ import { RegistrationComponent } from './registration/registration.component';
 import { ContactComponent } from './contact/contact.component';
 import { EVENTSandACTIVITIESComponent } from './eventsand-activities/eventsand-activities.component';
 import { EventGalleryComponent } from './event-gallery/event-gallery.component';
+import { SecretaryComponent } from './secretary/secretary.component';
+import { PrincipalsSpeaksComponent } from './principals-speaks/principals-speaks.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'welcome', component: WelcomeComponent },
   { path: 'aboutus/vision-mission', component: VisionMissionComponent },
   { path: 'aboutus/chairman-speaks', component: ChairmanSpeaksComponent },
+  { path: 'aboutus/secretary', component: SecretaryComponent },
   { path: 'aboutus/director-speaks', component: DirectorSpeaksComponent },
+  { path: 'aboutus/principals-speaks', component: PrincipalsSpeaksComponent },
   { path: 'Academicprograms/MBA', component: MBAComponent },
   { path: 'Academicprograms/BPharmacy', component: BPharmacyComponent },
   { path: 'Academicprograms/MPharmacy', component: MPharmacyComponent },
@@ -48,10 +52,10 @@ export const routes: Routes = [
   { path: 'facilities/committees', component: CommitteesComponent },
   { path: 'faculty/Mba', component: FacultyMbaComponent },
   { path: 'faculty/pharmacy', component: FacultypharmacyComponent },
-  { path: 'adminssion/mba', component: MbaComponent },
-  { path: 'adminssion/bpharmacy', component: BpharmacyComponent },
-  { path: 'adminssion/mpharmacy', component: MpharmacyComponent },
-  { path: 'adminssion/application', component: ApplicationComponent },
+  { path: 'admission/mba', component: MbaComponent },
+  { path: 'admission/bpharmacy', component: BpharmacyComponent },
+  { path: 'admission/mpharmacy', component: MpharmacyComponent },
+  { path: 'admission/application', component: ApplicationComponent },
   { path: 'placement/placement-cell', component: PlacementCellComponent },
   { path: 'placement/registration', component: RegistrationComponent },
   { path: 'contact', component: ContactComponent },
