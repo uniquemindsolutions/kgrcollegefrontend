@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
   // baseUrl:  'http://127.0.0.1:8000',
-  baseUrl:  'https://uniquemindsolutions.com/kgrcollegebackend',
+  baseUrl:  'https://kgrinstitutes.com/admin',
   
   STORAGE_KEY: '@WINHELP_STORAGE',
   emailPattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
