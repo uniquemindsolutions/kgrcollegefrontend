@@ -51,7 +51,7 @@
   font-size: 15px;
 }
 .bannerImg {
-  height: 420px;
+  height: 600px;
   img {
     height: 100%;
     object-fit: cover;
@@ -129,4 +129,25 @@
   //     display: none;
   //   }
   // }
+}
+
+.contact_section {
+  // background-color: hsl(216.49deg 81.04% 41.37%);
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.08),
+    0 6px 30px 5px rgba(0, 0, 0, 0.06), 0 8px 10px -7px rgba(0, 0, 0, 0.08);
+  border-radius: 60px;
+  background: #fff;
+  padding: 70px;
+  padding-left: 100px !important;
+  text-align: justify;
+  position: relative;
+  @media (max-width: 991px) {
+    padding: 40px !important;
+  }
+}
+.contact_section p {
+  margin: 10px;
+  color: #000;
+  font-size: 16px;
+  line-height: 25px;
 }
