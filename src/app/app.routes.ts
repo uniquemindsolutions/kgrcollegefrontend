@@ -34,6 +34,7 @@ import { PrincipalsSpeaksComponent } from './principals-speaks/principals-speaks
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'welcome', component: WelcomeComponent },
+  { path: 'aboutus/about-us', component: AboutUsComponent },
   { path: 'aboutus/vision-mission', component: VisionMissionComponent },
   { path: 'aboutus/chairman-speaks', component: ChairmanSpeaksComponent },
   { path: 'aboutus/secretary', component: SecretaryComponent },
@@ -62,6 +63,7 @@ export const routes: Routes = [
   { path: 'gallery', component: GalleryComponent },
   { path: 'eventsandactivites', component: EVENTSandACTIVITIESComponent },
   { path: 'event-gallery', component: EventGalleryComponent },
-
-  { path: 'aboutus/about-us', component: AboutUsComponent },
 ];
+
+
+
