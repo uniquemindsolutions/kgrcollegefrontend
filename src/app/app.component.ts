@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, OnInit  } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
@@ -22,6 +22,9 @@ import { RegistrationComponent } from './registration/registration.component';
 import { ContactComponent } from './contact/contact.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { EventGalleryComponent } from './event-gallery/event-gallery.component';
+import AOS from 'aos';
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -30,6 +33,17 @@ import { EventGalleryComponent } from './event-gallery/event-gallery.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  constructor(@Inject(PLATFORM_ID) private platformId: any) {}
   title = 'angular18';
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      import('aos').then(AOS => {
+        AOS.init();
+      });
+    }
+  }
+  // ngAfterViewInit() {
+  //   AOS.refresh(); // Refresh AOS to initialize it with dynamic content
+  // }
 }
