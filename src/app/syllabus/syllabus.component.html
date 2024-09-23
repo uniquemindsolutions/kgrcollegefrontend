@@ -1,35 +1,27 @@
 <section class="aboutUs">
-    <div class="bannerImg">
-      <img
-        src="assets/Images/mbaBanner.jpg"
-        alt=""
-        class="mba_banner_image w-100"
-      />
-    </div>
-    <div class="aboutSection position-relative py-5 mb-4">
-        <div class="container">
-          <div class="row">
-            <div class="gridItem">
-              <div class="card my-5">
-                <div
-                  class="card-header tableHeader"
-                  data-aos="fade-up"
-                  data-aos-duration="500"
-                >
-                  DOWNLOAD SECTION
-                </div>
-                <div class="card-body">
-                  <div class="table my-2 table-responsive">
-                    <table class="table table-bordered">
-                      <thead class="table-light">
-                        <tr class="table-active">
-                          <th>Course</th>
-                          <th>Total Sanctioned</th>
-                          <th>Admission under Converner Quota</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
+  <div class="bannerImg">
+    <img src="assets/Images/mbaBanner.jpg" alt="" class="mba_banner_image w-100" />
+  </div>
+  <div class="aboutSection position-relative py-5 mb-4">
+    <div class="container">
+      <div class="row">
+        <div class="gridItem">
+          <div class="card my-5">
+            <div class="card-header tableHeader" data-aos="fade-up" data-aos-duration="500">
+              DOWNLOAD SECTION
+            </div>
+            <div class="card-body">
+              <div class="table my-2 table-responsive">
+                <table class="table table-bordered">
+                  <thead class="table-light">
+                    <tr class="table-active">
+                      <th>Course</th>
+                      <th>Total Sanctioned</th>
+                      <th>Admission under Converner Quota</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- <tr>
                           <td>1</td>
                           <td>COLLEGE BROUCHER</td>
                           <td>
@@ -71,8 +63,8 @@
                               >click here
                             </a>
                           </td>
-                        </tr>
-                        <tr>
+                        </tr> -->
+                    <!-- <tr>
                           <td>4</td>
                           <td>COLLEGE APPLICATION FORM(M.Pharmacy)</td>
                           <td>
@@ -123,10 +115,19 @@
                             </a>
                           </td>
                         </tr>
-      
-                        <tr>
-                          <td>6</td>
-                          <td>MBA SYLLABUS W.E.F. 2021-2022</td>
+
+                        
+       -->
+                    <tr *ngFor="let syllabus of getAllsyllabusdata; let i = index">
+                      <td>{{ i + 1 }}</td> <!-- Displaying serial number -->
+                      <td>{{ syllabus.name }}</td> <!-- Displaying syllabus name -->
+                      <td>
+                        <a [href]="syllabus.file" target="_blank">click here</a> <!-- Displaying file link -->
+                      </td>
+                    </tr>
+                    <!-- <tr>
+                          <td>1</td>
+                          <td>MBA Syllabus With effect from 2023-2024</td>
                           <td>
                             <a
                               href="images1/MBAday Syllabus_2021.pdf"
@@ -139,8 +140,8 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>7</td>
-                          <td>MBA I YEAR SYLLABUS 2016-2017 to 2020-2021 batches</td>
+                          <td>2</td>
+                          <td>B.Pharmacy (PCI) Syllabus</td>
                           <td>
                             <a
                               href="images1/MBA I YEAR SYLLABUS.pdf"
@@ -153,8 +154,8 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>8</td>
-                          <td>MBA II YEAR SYLLABUS 2016-2017 to 2020-2021 batches</td>
+                          <td>3</td>
+                          <td>M.Pharmacy (PCI) Syllabus</td>
                           <td>
                             <a
                               href="images1/MBA II Year SYLLABUS.pdf"
@@ -165,9 +166,9 @@
                               >click here
                             </a>
                           </td>
-                        </tr>
-                        
-                        <!-- <tr>
+                        </tr> -->
+
+                    <!-- <tr>
                           <td>9</td>
                           <td>MBA PROJECT GUIDELINES</td>
                           <td>
@@ -208,13 +209,13 @@
                             >
                           </td>
                         </tr> -->
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+                  </tbody>
+                </table>
               </div>
             </div>
-          </div> 
+          </div>
         </div>
       </div>
-  </section>
+    </div>
+  </div>
+</section>

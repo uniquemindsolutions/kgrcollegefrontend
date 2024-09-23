@@ -1,91 +1,31 @@
 <section class="mt-5">
   <div class="container">
     <div class="row">
-      <div
-        class="col-lg-6 col-md-12 student_container"
-        data-aos="fade-right"
-        data-aos-duration="500"
-      >
-        <h1 class="form-heading">Important Sites for Students</h1>
+      <div class="col-lg-4 col-md-12 student_container" data-aos="fade-right" data-aos-duration="500">
+        <h5 class="text-white mt-3 mb-0">Important Sites for Students</h5>
         <hr />
-        <div class="row py-2">
-            <div class="col-lg-4">
-              <span class="white-gt">&gt;</span> AICTE -      
-            </div>
-            <div class="col-lg-8">
-              <a href="https://www.aicte-india.org" target="_blank">https://www.aicte-india.org</a>
-            </div>
-        </div>
-        <div class="row py-2">
-          <div class="col-lg-4"><span class="white-gt">&gt;</span> OSMANIA UNIVERSITY -</div>
-          <div class="col-lg-8"><a href="https://www.osmania.ac.in" target="_blank">https://www.osmania.ac.in</a></div>
-        </div>
-        <div class="row py-2">
-          <div class="col-lg-4"><span class="white-gt">&gt;</span> ePASS -</div>
-          <div class="col-lg-8"><a href="https://telanganaepass.cgg.gov.in" target="_blank">https://telanganaepass.cgg.gov.in</a></div>
-        </div>
-        <div class="row py-2">
-          <div class="col-lg-4"> <span class="white-gt">&gt;</span> TGICET -</div>
-          <div class="col-lg-8"><a href="https://tgicet.nic.in" target="_blank">https://tgicet.nic.in</a></div>
-        </div>
-        <div class="row py-2">
-          <div class="col-lg-4"><span class="white-gt">&gt;</span> TG-EAPCET(B) -</div>
-          <div class="col-lg-8"><a href="https://tgeapcet.nic.in" target="_blank">https://tgeapcet.nic.in</a></div>
-        </div>
-        <div class="row py-2">
-          <div class="col-lg-4"><span class="white-gt">&gt;</span> TG-EAPCET -</div>
-          <div class="col-lg-8"><a href="https://tgeapcet.nic.in" target="_blank">https://tgeapcet.nic.in</a></div>
-        </div>
-        <div class="row py-2">
-          <div class="col-lg-4"><span class="white-gt">&gt;</span> TG-ECET -</div>
-          <div class="col-lg-8"><a href="https://tgecet.nic.in" target="_blank">https://tgecet.nic.in</a></div>
-        </div>
-        <div class="row py-2">
-          <div class="col-lg-4"><span class="white-gt">&gt;</span> PCI -</div>
-          <div class="col-lg-8"><a href="https://www.pci.nic.in/" target="_blank">https://www.pci.nic.in/</a></div>
-        </div>
-        <div class="row py-2">
-          <div class="col-lg-4"><span class="white-gt">&gt;</span> TGPGECET -</div>
-          <div class="col-lg-8"><a href="https://pgecetadm.tsche.ac.in/" target="_blank">https://pgecetadm.tsche.ac.in/</a></div>
-        </div>
-        
-        
-        
-       
-        
+        <ul class="list-unstyled">
+          <li>&gt; <a href="https://www.aicte-india.org" target="_blank">AICTE</a></li>
+          <li>&gt; <a href="https://www.osmania.ac.in" target="_blank">OSMANIA UNIVERSITY</a></li>
+          <li>&gt; <a href="https://telanganaepass.cgg.gov.in" target="_blank">ePASS</a></li>
+          <li>&gt; <a href="https://tgicet.nic.in" target="_blank">TGICET</a></li>
+          <li>&gt; <a href="https://tgeapcet.nic.in" target="_blank">TG-EAPCET(B)</a> </li>
+          <li>&gt; <a href="https://tgecet.nic.in" target="_blank">TG-ECET</a></li>
+          <li>&gt; <a href="https://www.pci.nic.in/" target="_blank">PCI</a></li>
+          <li>&gt; <a href="https://pgecetadm.tsche.ac.in/" target="_blank">TGPGECET</a></li>
+
+        </ul>
       </div>
-      <div class="col-lg-6 col-md-12">
-        <!-- <form
-          class="contact-form p-4"
-          data-aos="fade-left"
-          data-aos-duration="2000"
-        >
+      <div class="col-lg-8 col-md-12 text-center">
+        <!-- <form class="contact-form p-4 text-center" data-aos="fade-left" data-aos-duration="2000">
           <h1 class="base-h6">Leave a Message</h1>
           <hr />
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            placeholder="Full name"
-          />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="Email ID"
-          />
-          <input
-            type="phone"
-            id="phone"
-            name="phone"
-            required
-            placeholder="Phone"
-          />
-          <button type="submit" class="w-25">Send</button> 
-          </form> -->
-          <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="contact-form p-4">
+          <input type="text" id="name" name="name" required placeholder="Full name" />
+          <input type="email" id="email" name="email" required placeholder="Email ID" />
+          <input type="phone" id="phone" name="phone" required placeholder="Phone" />
+          <button type="submit" class="w-25">Send</button>
+        </form> -->
+        <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="contact-form p-4">
             <h1 class="base-h6">Leave a Message</h1>
             <hr>
             <input type="text" [(ngModel)]="name" id="name" name="name" placeholder="Full name" required>
