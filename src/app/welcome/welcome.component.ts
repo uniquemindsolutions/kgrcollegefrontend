@@ -10,12 +10,14 @@ import { RouterModule } from '@angular/router';
   styleUrl: './welcome.component.scss'
 })
 export class WelcomeComponent {
-  collegeSource: any[] = [];
+  collegeSource: any;
+  // StudentCountSource: any;
   StudentCountSource: any[] = []; 
   // FacultyCountSource: any;
   FacultyCountSource: any[] = []; 
   // ProgrmasCountSource: any;
-  ProgrmasCountSource: any[] = [];
+  ProgrmasCountSource: any[] = []; 
+
   constructor(private welcomeComponent: HomeService) { }
   ngOnInit(): void {
     this.welcomeComponent.getCollegeupdates().subscribe({
@@ -31,7 +33,7 @@ export class WelcomeComponent {
     this.welcomeComponent.getStudentCount().subscribe({
       next: (res: any) => {
         this.StudentCountSource = res;
-        // console.log("StudentCount", res);
+         console.log("StudentCount", res);
 
       },
       error: (err: any) => {
