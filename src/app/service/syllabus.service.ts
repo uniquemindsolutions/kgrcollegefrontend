@@ -10,7 +10,7 @@ export class SyllabusService {
   constructor(private http:HttpClient) { }
   getSyllabus(){
     const headers = new HttpHeaders({
-      'Authorization': 'Token 98bd29055e21fabbde860dc2f1a98fe16ec52b23', // Authorization header
+      'Authorization': 'Token 8c34e543d34ee4c42633804a5d499c528c28dd38', // Authorization header
     });
     return this.http.get(`${this.baseUrl}/syllabus/`,{headers})
   }

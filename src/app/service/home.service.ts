@@ -11,7 +11,7 @@ export class HomeService {
 
   getbanner(typevalue:any, subtypevalue:any) {
     const headers = new HttpHeaders({
-      'Authorization': 'Token 98bd29055e21fabbde860dc2f1a98fe16ec52b23', // Authorization header
+      'Authorization': 'Token 8c34e543d34ee4c42633804a5d499c528c28dd38', // Authorization header
     });
     // return this.http.get(`http://127.0.0.1:8000/banners/?type=Home&sub_type=Banner`);
     return this.http.get(`${this.baseUrl}/banners/?type=Home&sub_type=Banner`,{headers});
@@ -19,7 +19,7 @@ export class HomeService {
 
   getCollegeupdates(){
     const headers = new HttpHeaders({
-      'Authorization': 'Token 98bd29055e21fabbde860dc2f1a98fe16ec52b23', // Authorization header
+      'Authorization': 'Token 8c34e543d34ee4c42633804a5d499c528c28dd38', // Authorization header
     });
     // return this.http.get(`http://127.0.0.1:8000/college-updates/`);
     return this.http.get(`${this.baseUrl}/college-updates/`,{headers});
@@ -27,7 +27,7 @@ export class HomeService {
 
   getStudentCount(){
     const headers = new HttpHeaders({
-      'Authorization': 'Token 98bd29055e21fabbde860dc2f1a98fe16ec52b23', // Authorization header
+      'Authorization': 'Token 8c34e543d34ee4c42633804a5d499c528c28dd38', // Authorization header
     });
     // return this.http.get(`http://127.0.0.1:8000/student-counts/`);
     return this.http.get(`${this.baseUrl}/student-counts/`,{headers});
@@ -35,7 +35,7 @@ export class HomeService {
 
   getFacutlyCount(){
     const headers = new HttpHeaders({
-      'Authorization': 'Token 98bd29055e21fabbde860dc2f1a98fe16ec52b23', // Authorization header
+      'Authorization': 'Token 8c34e543d34ee4c42633804a5d499c528c28dd38', // Authorization header
     });
     // return this.http.get(`http://127.0.0.1:8000/faculty-counts/`);
     return this.http.get(`${this.baseUrl}/faculty-counts/`,{headers});
@@ -43,7 +43,7 @@ export class HomeService {
 
   getProgramsCount(){
     const headers = new HttpHeaders({
-      'Authorization': 'Token 98bd29055e21fabbde860dc2f1a98fe16ec52b23', // Authorization header
+      'Authorization': 'Token 8c34e543d34ee4c42633804a5d499c528c28dd38', // Authorization header
     });
     // return this.http.get(`http://127.0.0.1:8000/programs-counts/`);
     return this.http.get(`${this.baseUrl}/programs-counts/`,{headers});
