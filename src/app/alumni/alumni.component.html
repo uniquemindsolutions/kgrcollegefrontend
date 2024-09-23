@@ -34,22 +34,16 @@
           <div class="mx-auto mt-4">
             <img [src]="alumni.alumni_image" alt="{{alumni.name}}" class="rounded-circle avatar-img" />
           </div>
-  
-          <!-- Card Content -->
-          <div class="card-body">
-            <h5 class="card-name">{{ alumni.name }}</h5>
-            <p class="card-location">{{ alumni.designation }}</p>
-  
-            <!-- Location with Icon -->
-            <div class="d-flex justify-content-center align-items-center">
-              <i class="bi bi-geo-alt"></i>
-              <span class="ms-2">{{ alumni.location }}</span>
+            <div class="alumni-details">
+              <h3>{{ alumni.name }}</h3>
+            </div>
+            <div class="alumni-location">
+              <p>{{ alumni.location }}</p>
             </div>
           </div>
         </div>
-      </div>
+      </div> 
     </div>
-  </div>  
 </section>
 
 

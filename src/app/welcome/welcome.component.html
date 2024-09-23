@@ -36,7 +36,7 @@
           data-aos-duration="1000">
           <img src="assets/Images/chairman-sir-pic.jpg" alt="Chairma" class="img-fluid" />
         </div>
-        <div class="col-lg-8" data-aos="fade-left" data-aos-duration="1500">
+        <div class="col-lg-8 mt-4" data-aos="fade-left" data-aos-duration="1500">
           <h1 class="base-h1 text-center text-lg-start">Chairman Speaks</h1>
           <p data-aos="fade-up" data-aos-duration="500">
             We found that single most important contributor to India's
@@ -131,15 +131,18 @@
       Our Gallery
     </h2>
     <div class="row">
-      <div class="col-lg-7" data-aos="fade-up" data-aos-duration="1000">
+      <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-duration="1000">
         <img src="assets/Images/home-gallery-img.png" alt="Gallery Photo 1" class="img-fluid" />
+        <div class="" data-aos="fade-right" data-aos-duration="1500">
+          <a href="gallery" class="btn btn-outline-orange mx-auto w-lg-30 w-md-100 my-3">View All...</a>
+        </div>
       </div>
       <div class="col-lg-5">
         <div class="College-Updates mb-5" data-aos="fade-left" data-aos-duration="500">
           <h3>Academic Programs:</h3>
           <hr />
-          <p>МBА-240 Seats TGICET Code KGRM</p>
-          <p>B.Pharmacy-100 Seats-TGEAMCET Cook: KGRR</p>
+          <p>МBА-240 Seats TGICET Code: KGRM</p>
+          <p>B.Pharmacy-100 Seats TGEAMCET Code: KGRR</p>
           <p>M.Pharmacy-45 Seats TGPGECET Code: KGRRI</p>
           <p>Break-up of Seats:</p>
           <ol>
@@ -159,9 +162,18 @@
           <p>Internal Complaint Committee</p>
           <p>SC/ST STANDING COMMITTEE</p> -->
           <div *ngFor="let update of collegeSource; let i = index;">
-            <p><a href="#" (click)="$event.preventDefault()" class="custom-link">{{ update.updates_text
-                }}</a></p>
+            <p>
+              <a href="#" (click)="$event.preventDefault()" class="custom-link">{{ update.updates_text
+                }}</a>
+                </p>
           </div>
+          <!-- <div *ngFor="let update of collegeSource; let i = index;">
+            <p>
+              <a 
+                [routerLink]="['/details', update.id]" 
+                class="custom-link">{{ update.name }}</a>
+            </p>
+          </div> -->
         </div>
       </div>
       <div class="col-md-12" data-aos="fade-right" data-aos-duration="1500">

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MailService } from '../service/mail.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-form',
   standalone: true,
@@ -15,7 +15,7 @@ export class FormComponent {
   email: string = '';
   phone: string = '';
 
-  constructor(private mailService: MailService) { }
+  constructor(private mailService: MailService,private router: Router) { }
 
   ngOnInit() {
   }
@@ -32,7 +32,8 @@ export class FormComponent {
     this.mailService.sendFormData(formData).subscribe(
       (response: any) => {
         console.log('Form submitted successfully:', response);
-        alert('Email sent successfully');
+        // alert('Email sent successfully');
+        this.router.navigate(['/success']);
       },
       (error) => {
         console.error('Error submitting form:', error);

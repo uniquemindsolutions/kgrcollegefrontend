@@ -30,7 +30,7 @@ import { EVENTSandACTIVITIESComponent } from './eventsand-activities/eventsand-a
 import { EventGalleryComponent } from './event-gallery/event-gallery.component';
 import { SecretaryComponent } from './secretary/secretary.component';
 import { PrincipalsSpeaksComponent } from './principals-speaks/principals-speaks.component';
-
+import { SucessPageComponent } from './sucess-page/sucess-page.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'welcome', component: WelcomeComponent },
@@ -63,6 +63,7 @@ export const routes: Routes = [
   { path: 'gallery', component: GalleryComponent },
   { path: 'eventsandactivites', component: EVENTSandACTIVITIESComponent },
   { path: 'event-gallery', component: EventGalleryComponent },
+  {path: 'success', component: SucessPageComponent },
 ];
 
 
