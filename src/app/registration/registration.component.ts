@@ -4,6 +4,7 @@ import { FooterComponent } from '../Components/footer/footer.component';
 import { StudentregistrationService } from '../service/studentregistration.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-registration',
   standalone: true,
@@ -27,7 +28,7 @@ export class RegistrationComponent {
   };
   fileToUpload: File | null = null;
 
-  constructor(private registrationService: StudentregistrationService) {}
+  constructor(private registrationService: StudentregistrationService,private router: Router) {}
 
   onSubmit(event: Event) {
     event.preventDefault();
@@ -46,7 +47,8 @@ export class RegistrationComponent {
     // Send form data via service
     this.registrationService.submitRegistration(formData).subscribe(
       (response) => {
-        alert('Details are successfully sent');
+        // alert('Details are successfully sent');
+        this.router.navigate(['/success']);
         console.log('Registration successful', response);
       },
       (error) => {

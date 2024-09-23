@@ -1,18 +1,22 @@
 import { Component } from '@angular/core';
 import { HomeService } from '../service/home.service';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-welcome',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule],
   templateUrl: './welcome.component.html',
   styleUrl: './welcome.component.scss'
 })
 export class WelcomeComponent {
   collegeSource: any;
-  StudentCountSource: any;
-  FacultyCountSource: any;
-  ProgrmasCountSource: any;
+  // StudentCountSource: any;
+  StudentCountSource: any[] = []; 
+  // FacultyCountSource: any;
+  FacultyCountSource: any[] = []; 
+  // ProgrmasCountSource: any;
+  ProgrmasCountSource: any[] = []; 
 
   constructor(private welcomeComponent: HomeService) { }
   ngOnInit(): void {
@@ -29,7 +33,7 @@ export class WelcomeComponent {
     this.welcomeComponent.getStudentCount().subscribe({
       next: (res: any) => {
         this.StudentCountSource = res;
-        // console.log("StudentCount", res);
+         console.log("StudentCount", res);
 
       },
       error: (err: any) => {

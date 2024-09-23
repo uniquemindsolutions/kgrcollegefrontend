@@ -1,8 +1,7 @@
 export const environment = {
   production: true,
   // baseUrl:  'http://127.0.0.1:8000',
-  baseUrl:  'https://kgrinstitutes.com/admin',
-  
+  baseUrl:  'https://kgrinstitutes.com/admin2',
   STORAGE_KEY: '@WINHELP_STORAGE',
   emailPattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
   mobilePattern: /^[0]?[1234567890]\d{9}$/,
