@@ -13,16 +13,28 @@ import { CommonModule } from '@angular/common';
 })
 export class GalleryComponent implements OnInit {
   GalleryPhotosSource: any = [];
+  GalleryVideosSource: any = [];
+
   constructor(private gallerycomponent: GalleryService) {}
-   
+
   ngOnInit(): void {
     this.gallerycomponent.getgalleryImages('Gallery', 'Image').subscribe({
       next: (res: any) => {
-        this.GalleryPhotosSource = res; 
-        console.log("photos",res);
+        this.GalleryPhotosSource = this.GalleryPhotosSource.concat(res);
+        console.log("photos", res);
       },
       error: (err: any) => {
         console.error('Error fetching gallery images', err);
+      }
+    });
+
+    this.gallerycomponent.getgalleryVideos('Gallery', 'Video').subscribe({
+      next: (res: any) => {
+        this.GalleryVideosSource  = this.GalleryVideosSource.concat(res);
+        console.log("Videos", res);
+      },
+      error: (err: any) => {
+        console.error('Error fetching gallery Videos', err);
       }
     });
   }
