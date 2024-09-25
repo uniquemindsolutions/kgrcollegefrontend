@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class EventGalleryComponent{
   EventsPhotosSource: any = [];
+  EventsVideoSource: any = [];
   EventsPhotos: any = [];  // To store grouped data by heading
   constructor(private eventandactivitescomponent: EventsandActivitesService) {}
 
@@ -21,32 +22,53 @@ export class EventGalleryComponent{
       next: (res: any) => {
         this.EventsPhotosSource = res;
         console.log("Event:", res);
-
-        // Call the function to group photos by heading
-        this.groupPhotosByHeading();
+        this.groupPhotosAndVideos();
       },
       error: (err: any) => {
         console.error("Error fetching EventsandActivites images", err);
       }
     });
+
+    // Fetch gallery videos
+    this.eventandactivitescomponent.geteventsandactivitesVideos("EventsandActivites", "Video").subscribe({
+      next: (res: any) => {
+        this.EventsVideoSource = res;
+        console.log("EventVideos:", res);
+        this.groupPhotosAndVideos();
+      },
+      error: (err: any) => {
+        console.error("Error fetching EventsandActivites Videos", err);
+      }
+    });
   }
 
-  groupPhotosByHeading(): void {
-    const grouped = this.EventsPhotosSource.reduce((acc: any, photo: any) => {
+  groupPhotosAndVideos(): void {
+    const grouped: any = {};
+  
+    // Group images by heading
+    this.EventsPhotosSource.forEach((photo: any) => {
       const heading = photo.heading;
-
-      // If the heading doesn't exist in the accumulator, initialize it
-      if (!acc[heading]) {
-        acc[heading] = { heading: heading, images: [] };
+  
+      if (!grouped[heading]) {
+        grouped[heading] = { heading: heading, images: [], videos: [] };
       }
-
-      // Push the photo into the corresponding heading group
-      acc[heading].images.push(photo);
-
-      return acc;
-    }, {});
-
+  
+      grouped[heading].images.push(photo);
+    });
+  
+    // Group videos by heading
+    this.EventsVideoSource.forEach((video: any) => {
+      const heading = video.heading;
+  
+      if (!grouped[heading]) {
+        grouped[heading] = { heading: heading, images: [], videos: [] };
+      }
+  
+      console.log('Video URL:', video.video);  // Log the video URL for debugging
+      grouped[heading].videos.push(video);
+    });
+  
     // Convert the grouped object to an array for easier iteration in the template
     this.EventsPhotos = Object.values(grouped);
-  }
+  }  
 }
