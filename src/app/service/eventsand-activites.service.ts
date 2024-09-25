@@ -16,4 +16,11 @@ export class EventsandActivitesService {
     // return this.http.get(`http://127.0.0.1:8000/eventsandactivites/?type=EventsandActivites&sub_type=Image`);
     return this.http.get(`${this.baseUrl}/eventsandactivites/?type=EventsandActivites&sub_type=Image`,{headers});
   }
+  geteventsandactivitesVideos(typevalue:any, subtypevalue:any){
+    const headers = new HttpHeaders({
+      'Authorization': 'Token 98bd29055e21fabbde860dc2f1a98fe16ec52b23', // Authorization header
+    });
+    // return this.http.get(`http://127.0.0.1:8000/eventsandactivites/?type=EventsandActivites&sub_type=Video`);
+    return this.http.get(`${this.baseUrl}/eventsandactivites/?type=EventsandActivites&sub_type=Video`,{headers});
+  }
 }

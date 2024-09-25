@@ -1,11 +1,6 @@
 <section class="gallerySection">
   <div class="bannerImg">
-    <img
-      data-fancybox="gallery"
-      src="assets/Images/galleryBanner.jpg"
-      alt=""
-      class="mba_banner_image w-100"
-    />
+    <img data-fancybox="gallery" src="assets/Images/galleryBanner.jpg" alt="" class="mba_banner_image w-100" />
   </div>
   <div class="container py-5">
     <div class="row">
@@ -192,16 +187,27 @@
           />
         </div>
       </div> -->
-      <div class="col-6 col-md-2" *ngFor="let image of GalleryPhotosSource; let i = index">
-        <div class="gridItem" data-aos="fade-up" data-aos-duration="500">
-          <img
-            [src]="image['image']"
-            alt="Gallery Image"
-            class="img-fluid"
-            data-fancybox="gallery"
-          />
+      <!-- Images Section -->
+      <div class="row">
+        <div class="col-6 col-md-2" *ngFor="let image of GalleryPhotosSource">
+          <div class="gridItem" data-aos="fade-up" data-aos-duration="500">
+            <img [src]="image['image']" alt="Gallery Image" class="img-fluid" data-fancybox="gallery" />
+          </div>
+        </div>
+
+      <!-- Videos Section -->
+      <div class="row">
+        <div class="col-6 col-md-2" *ngFor="let video of GalleryVideosSource">
+          <div class="gridItem" data-aos="fade-up" data-aos-duration="500">
+            <video width="100%"  controls>
+              <source [src]="video['video']" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
+    </div>
+
       <!-- <h5 class="my-4" data-aos="fade-up" data-aos-duration="500">
         Two Day National Conference on MSMEs –
         <span

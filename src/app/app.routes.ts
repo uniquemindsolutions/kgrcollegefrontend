@@ -27,7 +27,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ContactComponent } from './contact/contact.component';
 import { EVENTSandACTIVITIESComponent } from './eventsand-activities/eventsand-activities.component';
-import { EventGalleryComponent } from './event-gallery/event-gallery.component';
+import { EventGalleryComponent } from './event-gallery/event-gallery.component'
 import { SecretaryComponent } from './secretary/secretary.component';
 import { PrincipalsSpeaksComponent } from './principals-speaks/principals-speaks.component';
 import { SucessPageComponent } from './sucess-page/sucess-page.component';
