@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class FacultyMbaComponent {
   alumnidataSource:any;
+  mbafactulyImages:any;
   constructor(private mbaComponent:FacultyService) {}
   ngOnInit(): void {
     
@@ -22,6 +23,15 @@ export class FacultyMbaComponent {
         
       },
       error: (err: any) => {
+      }
+    })
+    this.mbaComponent.getmbafacutlyImages().subscribe({
+      next:(res:any)=>{
+        this.mbafactulyImages=res;
+        console.log("mbafactulyimages",res);
+      },
+      error:(err:any)=>{
+        console.log("Erro While Feaching mbafactulyimages",err);
       }
     })
   }

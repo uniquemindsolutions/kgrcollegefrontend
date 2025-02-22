@@ -1,29 +1,15 @@
 <section class="CentralLibrary">
   <div class="bannerImg">
-    <img
-      src="assets/Images/centralLibrary-banner.jpg"
-      alt=""
-      class="mba_banner_image w-100"
-    />
+    <img src="assets/Images/centralLibrary-banner.jpg" alt="" class="mba_banner_image w-100" />
   </div>
   <div class="librarysec position-relative py-5">
     <div class="container">
-      <div
-        class="row align-items-center justify-content-center mb-lg-0 py-5 mb-4"
-      >
+      <div class="row align-items-center justify-content-center mb-lg-0 py-5 mb-4">
         <div class="col-xl-5 col-lg-6">
-          <div
-            class="leftContent"
-            data-aos="fade-right"
-            data-aos-duration="500"
-          >
+          <div class="leftContent" data-aos="fade-right" data-aos-duration="500">
             <div class="d-flex">
               <div class="w-100 gridItemImg">
-                <img
-                  src="assets/Images/centralLibrary.jpg"
-                  alt="vision"
-                  class="w-100"
-                />
+                <img src="assets/Images/centralLibrary.jpg" alt="vision" class="w-100" />
               </div>
               <div class="widOfgrid">
                 <span>LIBRARY</span>
@@ -32,11 +18,7 @@
           </div>
         </div>
         <div class="col-xl-5 col-lg-6">
-          <div
-            class="rightContent ps-lg-5 mb-lg-0 mt-4"
-            data-aos="fade-left"
-            data-aos-duration="500"
-          >
+          <div class="rightContent ps-lg-5 mb-lg-0 mt-4" data-aos="fade-left" data-aos-duration="500">
             <div class="mainTitle">
               <h3><span>LIBRARY</span></h3>
               <p>
@@ -52,13 +34,52 @@
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="row">
+        <h4 class="pp-c">MBA Library</h4>
+        <div class="col-sm-3">
+          <img src="assets/Images/Libary_Images/Libaryimg1.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="col-sm-3">
+          <img src="assets/Images/Libary_Images/Libaryimg2.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="col-sm-3">
+          <img src="assets/Images/Libary_Images/Libaryimg3.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="col-sm-3">
+          <img src="assets/Images/Libary_Images/Libaryimg4.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="col-sm-3 mt-3">
+          <img src="assets/Images/Libary_Images/Libaryimg5.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="col-sm-3 mt-3">
+          <img src="assets/Images/Libary_Images/Libaryimg6.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="col-sm-3 mt-3">
+          <img src="assets/Images/Libary_Images/Libaryimg7.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="col-sm-3 mt-3">
+          <img src="assets/Images/Libary_Images/Libaryimg8.jpg" alt="" class="img-fluid">
+        </div>
+        <h4 class="pp-c mt-3">Pharamacy Library</h4>
+        <div class="col-sm-3 mt-3">
+          <img src="assets/Images/pharma-lib/pharma-lib1.jpeg" alt="" class="img-fluid">
+        </div>
+        <div class="col-sm-3 mt-3">
+          <img src="assets/Images/pharma-lib/pharma-lib2.jpeg" alt="" class="img-fluid">
+        </div>
+        <div class="col-sm-3 mt-3">
+          <img src="assets/Images/pharma-lib/pharma-lib3.jpeg" alt="" class="img-fluid">
+        </div>
+        <div class="col-sm-3 mt-3">
+          <img src="assets/Images/pharma-lib/pharma-lib5.jpeg" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
   </div>
+
   <div class="col-lg-10 m-auto">
-    <div
-      class="table my-5 table-responsive"
-      data-aos="fade-up"
-      data-aos-duration="500"
-    >
+    <div class="table my-5 table-responsive" data-aos="fade-up" data-aos-duration="500">
       <table class="table table-bordered">
         <thead class="table-light">
           <tr class="table-active">
@@ -68,7 +89,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <!-- <tr>
             <td>1</td>
             <td>Total area of the library:</td>
             <td>3609 Sqft.</td>
@@ -104,9 +125,14 @@
           <tr>
             <td>7</td>
             <td>Librarian & Qualifications</td>
-            <td>MBA - Mr. V. Pradeep - Librarian (MBA, M.Li.Sc) <br>
-              <span>Pharmacy - Mrs. R. Anjali - Librarian (Pharmacy, M.Li.Sc)</span>
-              </td>
+            <td>MBA - Mr. V. Pradeep - (MBA, M.Li.Sc) <br>
+                Pharmacy - Mrs. R. Anjali - (M.Li.Sc)
+            </td>
+          </tr> -->
+          <tr *ngFor="let item of libraryDetails; let i = index">
+            <td>{{ i + 1 }}</td>  <!-- Serial number -->
+            <td>{{ item.library_particulars }}</td>
+            <td>{{ item.description }}</td>
           </tr>
         </tbody>
       </table>
@@ -125,7 +151,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <!-- <tr>
             <td>1</td>
             <td>MBA</td>
             <td>2317</td>
@@ -148,7 +174,14 @@
             <td>2941</td>
             <td>10</td>
             <td>6</td>
-          </tr>
+          </tr> -->
+          <tr *ngFor="let items of libaryBooks; let j = index">
+            <td>{{ j + 1 }}</td>
+            <td>{{items.courses}}</td>
+            <td>{{items.titles}}</td>
+            <td>{{items.volumes}}</td>
+            <td>{{items.journals}}</td>
+            <td>{{items.international_journals}}</td>
         </tbody>
       </table>
     </div>

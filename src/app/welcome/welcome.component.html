@@ -11,7 +11,7 @@
           KGR Institute of Technology and Management run by KGR Group of
           Industries, under the dynamic supervision of Sri Lion Dr. K. Govinda Reddy
           with a primary purpose of providing the quality education for all. The
-          fact that we believe in 'fuelling the quest of knowledge'.KGRITM is
+          fact that we believe in 'fuelling the quest of knowledge'. KGRITM is
           not only emerging as a leader in the field of Management and
           pharmaceutical studies in Telangana but also is positioned as the best
           Professional Educational Institution. Since its inception, it is
@@ -73,10 +73,11 @@
           </p>
           <p data-aos="fade-up" data-aos-duration="500">
             Explore our business management program MBAto see how it can help
-            you become a successful business leader. 
+            you become a successful business leader.
           </p>
-          <p data-aos="fade-up" data-aos-duration="500">  
-            India has emerged as a world leader in the field of pharmacy and healthcare services. “India is called the global pharmacy capital.”
+          <p data-aos="fade-up" data-aos-duration="500">
+            India has emerged as a world leader in the field of pharmacy and healthcare services. “India is called the
+            global pharmacy capital.”
           </p>
           <p data-aos="fade-up" data-aos-duration="500">
             Especially post-COVID, our contribution to the world has been
@@ -146,8 +147,8 @@
           <p>M.Pharmacy-45 Seats TGPGECET Code: KGRRI</p>
           <p>Break-up of Seats:</p>
           <ol>
-            <p>Pharmaceutics-15 seats</p>
             <p>Pharmaceutical Analysis-15 seats</p>
+            <p>Pharmaceutics-15 seats</p>
             <p>Pharmacology-15 seats</p>
           </ol>
         </div>
@@ -162,11 +163,26 @@
           <p>Internal Complaint Committee</p>
           <p>SC/ST STANDING COMMITTEE</p> -->
           <div *ngFor="let update of collegeSource; let i = index;">
-            <p>
-              <a href="#" (click)="$event.preventDefault()" class="custom-link">{{ update.updates_text
-                }}</a>
-                </p>
+            <!-- Link that opens in a new tab -->
+            <p *ngIf="update.updates_url">
+              <a [href]="update.updates_url" target="_blank" class="custom-link">
+                {{ update.updates_text || "View Update" }}
+              </a>
+            </p>
+
+            <!-- File download using updates_text as filename -->
+            <p *ngIf="update.updates_files">
+              <a [href]="update.updates_files" target="_blank" [attr.download]="update.updates_text" class="custom-link">
+                {{ update.updates_text }}
+              </a>
+            </p>
+
+            <!-- Show text when no URL or file -->
+            <p *ngIf="!update.updates_url && !update.updates_files">
+              {{ update.updates_text }}
+            </p>
           </div>
+
           <!-- <div *ngFor="let update of collegeSource; let i = index;">
             <p>
               <a 
