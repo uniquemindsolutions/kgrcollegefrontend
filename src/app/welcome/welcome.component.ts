@@ -22,8 +22,10 @@ export class WelcomeComponent {
   ngOnInit(): void {
     this.welcomeComponent.getCollegeupdates().subscribe({
       next: (res: any) => {
-        this.collegeSource = res;
-        // console.log("CollegeUpdates", res);
+        this.collegeSource = res.map((update: any) => ({
+          ...update,
+          fileName: this.getFileName(update.updates_files)
+        }));
 
       },
       error: (err: any) => {
@@ -60,4 +62,8 @@ export class WelcomeComponent {
       }
     })
   }
+  getFileName(fileUrl: string): string {
+    return fileUrl ? fileUrl.split('/').pop() || 'download' : 'download';
+  }
+  
 }

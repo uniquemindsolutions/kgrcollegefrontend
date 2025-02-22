@@ -17,7 +17,7 @@
 
     <div class="gridItem">
       <div class="row row-cols-1 row-cols-md-3 g-4 mb-3">
-        <div class="col">
+        <!-- <div class="col">
           <div
             class="card departmentCard"
             data-aos="fade-up"
@@ -82,6 +82,24 @@
                 Is a professor of Business Management.He has an work and
                 research experience of over 30 years in professional teaching in
                 the department Business Management.
+              </p>
+            </div>
+          </div>
+        </div> -->
+        <div class="col" *ngFor="let faculty of mbafactulyImages">
+          <div class="card departmentCard" data-aos="fade-up" data-aos-duration="500">
+            <img
+              [src]="faculty.faculty_image"
+              class="card-img-top"
+              [alt]="faculty.faculty_name"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                <strong>{{ faculty.faculty_name }}</strong>
+              </h5>
+              <p class="card-text">
+               {{ faculty.faculty_designation }}<br />
+                {{ faculty.faculty_description }}
               </p>
             </div>
           </div>

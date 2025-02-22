@@ -31,6 +31,8 @@ import { EventGalleryComponent } from './event-gallery/event-gallery.component'
 import { SecretaryComponent } from './secretary/secretary.component';
 import { PrincipalsSpeaksComponent } from './principals-speaks/principals-speaks.component';
 import { SucessPageComponent } from './sucess-page/sucess-page.component';
+import { BiochemistrylabComponent } from './biochemistrylab/biochemistrylab.component';
+import { ChemistrylabComponent } from './chemistrylab/chemistrylab.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'welcome', component: WelcomeComponent },
@@ -50,6 +52,8 @@ export const routes: Routes = [
   { path: 'facilities/computerLab', component: ComputerLabComponent },
   { path: 'facilities/extracurricular', component: ExtracurricularComponent },
   { path: 'facilities/pharamacyLab', component: PharmacyLabComponent },
+  { path: 'facilities/biochemistrylab', component: BiochemistrylabComponent },
+  { path: 'facilities/chemistrylab', component: ChemistrylabComponent },
   { path: 'facilities/committees', component: CommitteesComponent },
   { path: 'faculty/Mba', component: FacultyMbaComponent },
   { path: 'faculty/pharmacy', component: FacultypharmacyComponent },

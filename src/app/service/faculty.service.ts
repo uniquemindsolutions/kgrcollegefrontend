@@ -9,6 +9,12 @@ export class FacultyService {
   public baseUrl = environment.baseUrl;
 
   constructor(private http:HttpClient) { }
+  getmbafacutlyImages(){
+    const headers = new HttpHeaders({
+      'Authorization': 'Token 8c34e543d34ee4c42633804a5d499c528c28dd38', // Authorization header
+    });
+    return this.http.get(`${this.baseUrl}/Mba_Faculty_Images/`,{headers});
+  }
   getmbafacutly(){
     const headers = new HttpHeaders({
       'Authorization': 'Token 8c34e543d34ee4c42633804a5d499c528c28dd38', // Authorization header

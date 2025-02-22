@@ -11,13 +11,24 @@ import { Router } from '@angular/router';
   styleUrl: './form.component.scss'
 })
 export class FormComponent {
+  sites: any[] = [];
   name: string = '';
   email: string = '';
   phone: string = '';
+  message: string = '';
 
   constructor(private mailService: MailService,private router: Router) { }
 
   ngOnInit() {
+    this.mailService.ImportantSite().subscribe({
+      next: (resp: any) => {
+        console.log("Importatsite",resp);
+        this.sites = resp;
+      },
+      error: (err: any) => {
+        console.error('Error fetching sites:', err);
+      }
+    });
   }
   onSubmit() {
     console.log('Submitting form...'); // Debugging
@@ -25,7 +36,8 @@ export class FormComponent {
     const formData = {
       name: this.name,
       email: this.email,
-      phone: this.phone
+      phone: this.phone,
+      message:this.message
     };
     console.log(formData,"payload");
   
